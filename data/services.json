@@ -4055,6 +4055,1672 @@
         "alt": null,
         "checkedAt": "2026-11-14"
       }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "プライバシー保護を特徴とし、複数のAIモデルを無料で使い分けられるサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "multi_model"
+      ],
+      "id": "duck-ai",
+      "name": "Duck.ai",
+      "provider": {
+        "name": "DuckDuckGo（Duck Duck Go, Inc.）",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "ddg-imprint"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://duck.ai/",
+      "description": {
+        "ja": "DuckDuckGo が提供する、プライバシーを重視したAIチャット。他社の複数のAIモデルを選んで、匿名に近い形で会話できます。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "ddg-help"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": {
+            "ja": "公式の「利用できない地域」の一覧に日本は含まれていません（日本で利用できるとの明記はありません）。"
+          },
+          "evidenceIds": [
+            "ddg-regions"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "他社のAIモデルを選んで会話します。一部のモデルは無料で利用できます。"
+          },
+          "evidenceIds": [
+            "ddg-help"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "1日あたりの上限があり、有料プランでは上限が上がります。"
+          },
+          "evidenceIds": [
+            "ddg-image"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "音声チャットと音声入力が任意の機能として提供されています。プランの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "ddg-privacy"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "file_analysis",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "一部のモデルで画像と PDF をアップロードできます。PDF のページ数は Free 15・Plus 35・Pro 50 まで。スプレッドシートには非対応です。"
+          },
+          "evidenceIds": [
+            "ddg-files"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "data_analysis",
+          "status": "unsupported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "スプレッドシートのアップロードには対応していないと記載されています。"
+          },
+          "evidenceIds": [
+            "ddg-files"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "無料で使えるモデルが用意されています。利用量に上限があります。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "ddg-help"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Plus",
+            "access": "paid",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "DuckDuckGo の有料サブスクリプション。使えるモデルが増えます。価格は未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "ddg-plans"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Pro",
+            "access": "paid",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "Plus の2倍の利用量。価格は未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "ddg-plans"
+            ],
+            "checkedAt": "2026-11-14"
+          }
+        ],
+        "evidenceIds": [
+          "ddg-help",
+          "ddg-plans"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "evidence": [
+        {
+          "id": "ddg-imprint",
+          "url": "https://duckduckgo.com/duckduckgo-help-pages/r-legal/imprint-and-transparency",
+          "title": "Impressum und Transparenzangaben - DuckDuckGo Help Pages",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "de",
+          "note": "Duck Duck Go, Inc. の所在地として米国ペンシルベニア州パオリを記載。"
+        },
+        {
+          "id": "ddg-help",
+          "url": "https://duckduckgo.com/duckduckgo-help-pages/duckai/",
+          "title": "Duck.ai - DuckDuckGo Help Pages",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "他社のAIチャットモデルと非公開で会話できる機能。無料で使えるモデルの一覧。"
+        },
+        {
+          "id": "ddg-regions",
+          "url": "https://duckduckgo.com/duckduckgo-help-pages/duckai/duckai-unsupported-regions",
+          "title": "Duck.ai Unsupported Regions - DuckDuckGo Help Pages",
+          "sourceType": "official_availability",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Duck.ai を利用できない国の一覧（日本は含まれない）。"
+        },
+        {
+          "id": "ddg-image",
+          "url": "https://duckduckgo.com/duckduckgo-help-pages/duckai/image-creation",
+          "title": "Can I create images with Duck.ai? - DuckDuckGo Help Pages",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "画像を生成できる。1日の上限があり、有料プランは上限が高い。"
+        },
+        {
+          "id": "ddg-privacy",
+          "url": "https://duckduckgo.com/duckai/privacy-terms",
+          "title": "Duck.ai Privacy Policy and Terms of Use",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "音声チャットと音声入力を任意の機能として提供と記載。"
+        },
+        {
+          "id": "ddg-files",
+          "url": "https://duckduckgo.com/duckduckgo-help-pages/privacy-pro/duck-ai/does-duckai-support-file-uploads",
+          "title": "Does Duck.ai support file uploads? - DuckDuckGo Help Pages",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "一部のモデルで画像と PDF のアップロードに対応。スプレッドシートは非対応。"
+        },
+        {
+          "id": "ddg-plans",
+          "url": "https://duckduckgo.com/duckduckgo-help-pages/privacy-pro/plus-and-pro-plan-differences",
+          "title": "What's the difference between the DuckDuckGo subscription's Plus and Pro plan? - DuckDuckGo Help Pages",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Plus と Pro で使えるモデルと利用量の違い。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "ddg-help"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://duck.ai/og-image-duckai.png",
+        "sourceUrl": "https://duck.ai/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "情報検索よりも会話や相談に重点を置いた対話型AIの代表例のため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "character_companion"
+      ],
+      "id": "pi",
+      "name": "Pi",
+      "provider": {
+        "name": "Inflection AI",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "inflection-terms"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://pi.ai/",
+      "description": {
+        "ja": "Inflection AI が提供する、話し相手として寄り添うことを重視した対話型AI。考えの整理や相談、リマインダーの設定などに使えます。"
+      },
+      "platforms": {
+        "values": [
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "hey-pi"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "悩みの相談や考えの整理などの会話ができると紹介されています。"
+          },
+          "evidenceIds": [
+            "hey-pi"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "声で話しかけられると紹介されています。条件は未確認です。"
+          },
+          "evidenceIds": [
+            "hey-pi"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "hey-pi",
+          "url": "https://hey.pi.ai/",
+          "title": "Pi, the first emotionally intelligent AI",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "App Store と Google Play でアプリを提供。会話、リマインダー、音声での利用の紹介。"
+        },
+        {
+          "id": "inflection-terms",
+          "url": "https://inflection.ai/terms-of-service",
+          "title": "Terms of Service | Inflection AI",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "提供者は Inflection AI, Inc.。通知先として米国カリフォルニア州サンフランシスコの住所を記載。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "hey-pi"
+        ],
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [
+        "c.ai"
+      ],
+      "inclusionReason": {
+        "ja": "キャラクターとの会話に特化した対話型AIサービスの代表例のため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "character_companion"
+      ],
+      "id": "character-ai",
+      "name": "Character.AI",
+      "provider": {
+        "name": "Character.AI",
+        "originCountryCode": null,
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "officialUrl": "https://character.ai/",
+      "description": {
+        "ja": "さまざまなキャラクターと会話して楽しむ対話型AIサービス。ロールプレイや物語づくりに使われます。2026年10月に米国で破産手続き（Chapter 11）を開始しましたが、サービスは継続していると発表されています。"
+      },
+      "platforms": {
+        "values": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "キャラクターとのロールプレイ向けの会話。すべてのプランでメッセージは無制限と記載されています。"
+          },
+          "evidenceIds": [
+            "cai-styles"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "アプリの「Comics」「Imagine」機能で提供されています。無料プランでの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "cai-image"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "すべてのプランでメッセージは無制限と記載されています。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "cai-styles"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "(c.ai) lite",
+            "access": "paid",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "月 $4.99 または週 $2.49（米ドル）と記載。価格は地域によって異なるため金額は登録していません。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "cai-styles"
+            ],
+            "checkedAt": "2026-11-14"
+          }
+        ],
+        "evidenceIds": [
+          "cai-styles"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "evidence": [
+        {
+          "id": "cai-styles",
+          "url": "https://blog.character.ai/new-styles-new-plan/",
+          "title": "introducing PipSqueak 3, ShortSqueak, and (c.ai) lite",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-14",
+          "publishedAt": "2026-09-28",
+          "locale": "en",
+          "note": "ロールプレイ向けの新しい会話スタイルと、有料プラン (c.ai) lite の価格（地域により異なる）。"
+        },
+        {
+          "id": "cai-image",
+          "url": "https://blog.character.ai/cai-image-models/",
+          "title": "Post-training image models for fandom",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-14",
+          "publishedAt": "2026-09-16",
+          "locale": "en",
+          "note": "画像モデルがアプリの Comics と Imagine 機能で提供中と記載。"
+        },
+        {
+          "id": "cai-update",
+          "url": "https://blog.character.ai/an-update-on-character-ai/",
+          "title": "An Update on Character.ai",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-14",
+          "publishedAt": "2026-10-12",
+          "locale": "en",
+          "note": "米国で Chapter 11 の破産手続きを開始し、プラットフォームは引き続き稼働していると発表。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "cai-update"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://character.ai/character-ai.jpg",
+        "sourceUrl": "https://character.ai/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [
+        "NotebookLM"
+      ],
+      "inclusionReason": {
+        "ja": "自分で集めた資料をもとに対話する「資料ベース」のAIサービスの代表例のため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "document_research"
+      ],
+      "id": "gemini-notebook",
+      "name": "Gemini Notebook",
+      "provider": {
+        "name": "Google",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "nb-google-terms"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://notebook.google/",
+      "description": {
+        "ja": "Google が提供する、手持ちの資料をもとに調べものや学習ができるAIツール（旧称 NotebookLM）。資料について質問したり、要約を動画や音声で作ったりできます。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "nb-limits"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "Gmail のアカウントで無料で登録できます。"
+          },
+          "evidenceIds": [
+            "nb-plans"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "video_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "資料をもとに解説動画（Video Overviews）を作れます。シネマティック形式は18歳以上・英語のみ。モバイルアプリでは制限がある場合があります。"
+          },
+          "evidenceIds": [
+            "nb-video"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "ノートブックに追加できる資料の数は、無料版で50件、有料プランで最大600件です。"
+          },
+          "evidenceIds": [
+            "nb-limits"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "Gmail のアカウントで無料で登録できます。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "nb-plans"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Google AI Plus / Pro / Ultra",
+            "access": "paid",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "Google AI プランに加入すると上限が上がります（Plus は2倍、Pro は4倍など）。価格は Gemini の項目を参照。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "nb-limits"
+            ],
+            "checkedAt": "2026-11-14"
+          }
+        ],
+        "evidenceIds": [
+          "nb-plans",
+          "nb-limits"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "evidence": [
+        {
+          "id": "nb-google-terms",
+          "url": "https://policies.google.com/terms?hl=en",
+          "title": "Google Terms of Service – Privacy & Terms – Google",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "サービス提供者として Google LLC（米国カリフォルニア州マウンテンビュー）を記載。"
+        },
+        {
+          "id": "nb-plans",
+          "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en",
+          "title": "Learn about Gemini Notebook's plans",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Gmail アカウントで無料登録できること。Google AI プランごとの違い。"
+        },
+        {
+          "id": "nb-limits",
+          "url": "https://support.google.com/gemininotebook/answer/17670842?hl=en",
+          "title": "Manage your Gemini Notebook usage limits",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "プランごとのノートブック数・資料数の上限。パソコン・Android・iPhone 向けの説明。"
+        },
+        {
+          "id": "nb-video",
+          "url": "https://support.google.com/gemininotebook/answer/16454555?hl=en",
+          "title": "Generate Video Overviews in Gemini Notebook",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "資料から解説動画を作る機能。シネマティック形式は18歳以上・英語のみ。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "nb-plans"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://notebook.google/_/static/branding/v6/og/notebook_lm_share.png",
+        "sourceUrl": "https://notebook.google/",
+        "alt": "Gemini Notebook",
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [
+        "Алиса AI",
+        "Алиса"
+      ],
+      "inclusionReason": {
+        "ja": "ロシア語圏で広く使われる対話型AIサービスで、地域のバランスを考慮したため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "alice-ai",
+      "name": "Alice AI",
+      "provider": {
+        "name": "Yandex",
+        "originCountryCode": null,
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "officialUrl": "https://alice.yandex.ru/",
+      "description": {
+        "ja": "ロシアの Yandex が提供する対話型AIアシスタント（Алиса AI）。文章の作成、画像の生成、ファイルの読み込み、店の予約などに対応しています。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "alice-home"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ru"
+          ],
+          "evidenceIds": [
+            "alice-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料と紹介されています。会話の履歴を残すにはアカウントへのログインが必要です。"
+          },
+          "evidenceIds": [
+            "alice-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "説明文から画像を作れると紹介されています。"
+          },
+          "evidenceIds": [
+            "alice-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "file_analysis",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [
+              "Pro モード"
+            ],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "Pro モードで複数ファイルのアップロードができると記載されています。"
+          },
+          "evidenceIds": [
+            "alice-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "店を探して予約する、安い価格を探すなどの機能があり、ログインが必要です。"
+          },
+          "evidenceIds": [
+            "alice-home"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "無料と紹介されています。有料プランの有無と価格は未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "alice-home"
+            ],
+            "checkedAt": "2026-11-14"
+          }
+        ],
+        "evidenceIds": [
+          "alice-home"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "evidence": [
+        {
+          "id": "alice-home",
+          "url": "https://alice.yandex.ru/",
+          "title": "Нейросеть Алиса AI - бесплатный ии-чат Яндекса",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "ru",
+          "note": "Web の画面（ロシア語）。無料のAIチャットと紹介。文章生成、画像生成、ファイルのアップロード（Pro モード）、予約や価格比較の機能。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "alice-home"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://yastatic.net/s3/alicestatic/_/v2/static/media/og-image.05fe0066.png",
+        "sourceUrl": "https://alice.yandex.ru/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "複数の作業をAIエージェントに任せる「ワークスペース型」のサービスの代表例で、日本向けのページもあるため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "genspark",
+      "name": "Genspark",
+      "provider": {
+        "name": "MainFunc Inc.（Genspark Inc.）",
+        "originCountryCode": null,
+        "evidenceIds": [
+          "genspark-terms"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://www.genspark.ai/",
+      "description": {
+        "ja": "エージェント機能を中心にしたAIワークスペース。会話に加え、スライド・表・文書の作成、画像や動画の生成、コードやWebページの作成などのメニューがあります。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "ios"
+        ],
+        "evidenceIds": [
+          "genspark-home"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「AI Chat」として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "genspark-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「AI Media Studio」（動画・画像・音声・3D）として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "genspark-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "video_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「AI Media Studio」として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "genspark-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "code_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「AI Build Suite」（デザイン・コード・ダッシュボード）として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "genspark-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "複数のエージェントが作業する機能が画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "genspark-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "document_creation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "スライド・表・文書の作成が画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "genspark-home"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "genspark-home",
+          "url": "https://www.genspark.ai/",
+          "title": "Genspark - Your All-in-One AI Workspace",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "日本から開いた Web の画面。エージェント、AI Media Studio、スライド・表・文書、コード、AI Chat のメニュー。App Store へのリンク。"
+        },
+        {
+          "id": "genspark-terms",
+          "url": "https://www.genspark.ai/terms",
+          "title": "Terms of Service - Genspark",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "サービス提供者は MainFunc Inc. と、その完全子会社の Genspark Inc.。所在地の記載なし。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "genspark-home"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://cdn1.genspark.ai/user-upload-image/admin/image/seo/og/en.jpg",
+        "sourceUrl": "https://www.genspark.ai/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "さまざまなAIモデルを1つのサービスで比べながら使える代表例のため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "multi_model"
+      ],
+      "id": "poe",
+      "name": "Poe",
+      "provider": {
+        "name": "Quora",
+        "originCountryCode": null,
+        "evidenceIds": [
+          "poe-terms"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://poe.com/",
+      "description": {
+        "ja": "Quora が提供する、複数の会社のAIモデルやボットを1か所で使い分けられるサービス。個人での会話のほか、グループチャットでも使えます。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "poe-login"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "他社のAIモデルによるボットと会話します。ボットごとにメッセージ数やポイントの上限があります。13歳以上が対象。"
+          },
+          "evidenceIds": [
+            "poe-login",
+            "poe-terms"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "画像生成モデルのボットを選んで利用します（他社のモデル）。"
+          },
+          "evidenceIds": [
+            "poe-login"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "poe-login",
+          "url": "https://poe.com/login?redirect_url=%2F",
+          "title": "Poe - Fast, Helpful AI Chat",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "日本から開いた画面。各社のAIモデル（画像生成モデルを含む）を使えると紹介。グループチャットにも対応。"
+        },
+        {
+          "id": "poe-terms",
+          "url": "https://poe.com/tos",
+          "title": "Terms of Service | Poe",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Poe は他社のAIモデルによるボットを使えるプラットフォームで、契約相手は Quora, Inc.。13歳未満は利用不可。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "poe-login"
+        ],
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [
+        "ГигаЧат"
+      ],
+      "inclusionReason": {
+        "ja": "ロシア語圏の対話型AIサービスで、地域のバランスを考慮したため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "gigachat",
+      "name": "GigaChat",
+      "provider": {
+        "name": "Sber",
+        "originCountryCode": null,
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "officialUrl": "https://giga.chat/",
+      "description": {
+        "ja": "ロシアの Sber（ズベルバンク）が提供する、ロシア語を中心とした対話型AIサービス。会話のほか、音声での会話や調べものの機能があります。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "giga-home"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ru"
+          ],
+          "evidenceIds": [
+            "giga-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": null,
+          "evidenceIds": [
+            "giga-home"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「声で話す」（Общаться голосом）として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "giga-home"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "giga-home",
+          "url": "https://giga.chat/",
+          "title": "ГигаЧат — русскоязычная нейросеть от Сбера",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "ru",
+          "note": "日本から開いた Web の画面（ロシア語）。新しいチャット、プロジェクト、動画、調べもの、音声での会話のメニュー。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "giga-home"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://cdn-app.giga.chat/misc/0.0.0/assets/gigachat-web/ae703648_1200x630.png",
+        "sourceUrl": "https://giga.chat/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [
+        "Felo AI",
+        "フェロー"
+      ],
+      "inclusionReason": {
+        "ja": "日本の会社が提供し、日本語の画面で使える検索型のAIサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "search_assistant"
+      ],
+      "id": "felo",
+      "name": "Felo",
+      "provider": {
+        "name": "Felo 株式会社（Felo Inc.）",
+        "originCountryCode": "JP",
+        "evidenceIds": [
+          "felo-official"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://felo.ai/",
+      "description": {
+        "ja": "Felo 株式会社が提供する、AIによる検索と作成のサービス。日本語の画面で使え、検索に加えてスライドや動画、画像の作成、エージェントによる調査などに対応しています。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "felo-ja"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ja",
+            "en",
+            "ko",
+            "zh-Hans",
+            "zh-Hant"
+          ],
+          "evidenceIds": [
+            "felo-ja"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "質問を入力して答えを得られます。"
+          },
+          "evidenceIds": [
+            "felo-ja"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "web_search",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "多言語での検索と出典の引用ができると紹介されています。"
+          },
+          "evidenceIds": [
+            "felo-ja",
+            "felo-official"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「AIデザイナー」として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "felo-ja"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "video_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「Text to Video」「動画をつくる」として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "felo-ja"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "エージェントによるリサーチが画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "felo-ja"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "document_creation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「AI スライド」として画面のメニューに用意されています。プランや回数などの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "felo-ja"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "felo-ja",
+          "url": "https://felo.ai/ja",
+          "title": "Felo（フェロー）- 無料のAI検索・作成プラットフォーム",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "日本語の画面。検索、動画・スライド・画像の作成、リサーチ、エージェントのメニュー。言語の切り替えに日本語など約20言語。© 2026 Felo Inc."
+        },
+        {
+          "id": "felo-official",
+          "url": "https://official.felo.ai/",
+          "title": "Felo – AI検索・リアルタイム翻訳 | Felo 株式会社",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "運営会社 Felo 株式会社の公式サイト。多言語検索と出典の引用、リアルタイム翻訳の紹介。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "felo-ja"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://static.felo.ai/felo-search-ext/20251122-165010.webp",
+        "sourceUrl": "https://felo.ai/ja",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
     }
   ]
 }
