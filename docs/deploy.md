@@ -11,7 +11,7 @@ npm test                       # テスト
 npm run validate -- --strict   # 公開データの検証（確認から90日超の情報があれば失敗）
 npm run review                 # 照合シートを作り、根拠と記録が一致しているか確認（docs/data-workflow.md）
 npm run og                     # データの提供元の国が変わったら OGP 画像を作り直す
-npm run build:prod             # 本番用ビルド（og:image を絶対 URL にする）
+npm run build                  # 本番用ビルド（og:image などが絶対 URL でなければエラーで止まる）
 npm run preview                # dist/ を手元で確認（Cloudflare と同じヘッダーを付けて配信）
 ```
 
@@ -29,7 +29,7 @@ npm run preview                # dist/ を手元で確認（Cloudflare と同じ
    | フレームワーク | なし |
    | ビルドコマンド | `npm run build` |
    | 出力ディレクトリ | `dist` |
-   | 環境変数 | `SITE_URL` = `https://ai-atlas.tariki-code.tokyo` |
+   | 環境変数 | 不要（`ai-atlas.tariki-code.tokyo` 以外で公開する場合だけ `SITE_URL` を設定） |
 
    Node.js のバージョンは、リポジトリの `.node-version`（22）が使われます。依存パッケージはないので、インストールの手順は不要です。
 4. 保存すると最初のビルドが走り、`<プロジェクト名>.pages.dev` で公開される。表示を確認する。
@@ -39,7 +39,7 @@ npm run preview                # dist/ を手元で確認（Cloudflare と同じ
 GitHub を使わずに、手元でビルドした `dist/` を直接アップロードします。
 
 ```sh
-npm run build:prod
+npm run build
 npx wrangler login                                        # ブラウザで Cloudflare にログイン（初回のみ）
 npx wrangler pages deploy dist --project-name ai-atlas    # 初回はプロジェクトが作成される
 ```
@@ -68,7 +68,7 @@ npx wrangler pages deploy dist --project-name ai-atlas    # 初回はプロジ�
 
 - トップ・一覧・詳細画面が表示される。スマートフォンでも確認する。
 - ブラウザの開発者ツールで、コンテンツセキュリティポリシー（CSP）の違反が出ていない。
-- SNS のリンクプレビュー確認ツールで OGP 画像が表示される（画像の URL は `https://ai-atlas.tariki-code.tokyo/og-image.png`）。
+- SNS で OGP 画像が大きく表示される（画像の URL は `https://ai-atlas.tariki-code.tokyo/og-image.png`）。X などはリンクの情報をしばらく保存するため、修正直後は古い表示のことがある。`https://ai-atlas.tariki-code.tokyo/?v=2` のように末尾を変えた URL で確かめる。
 - `https://ai-atlas.tariki-code.tokyo/robots.txt` と `/sitemap.xml` が開ける。
 
 ## 関連ファイル
@@ -78,4 +78,4 @@ npx wrangler pages deploy dist --project-name ai-atlas    # 初回はプロジ�
 | `site/_headers` | Cloudflare Pages のレスポンスヘッダー（CSP など）。`npm run dev` / `preview` でも同じものが付く |
 | `site/robots.txt`、`site/sitemap.xml` | 検索エンジン向け |
 | `.node-version` | ビルドに使う Node.js のバージョン |
-| `scripts/build.mjs` | `SITE_URL` があると og:image を絶対 URL にし、og:url を加える |
+| `scripts/build.mjs` | og:image・og:url・twitter:image が絶対 URL かを確かめる。`SITE_URL` があると公開先の URL を置き換える |

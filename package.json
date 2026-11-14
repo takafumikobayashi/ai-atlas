@@ -16,6 +16,6 @@
     "review": "node scripts/review.mjs",
     "previews": "node scripts/fetch-previews.mjs",
     "og": "node scripts/build-og.mjs",
-    "build:prod": "SITE_URL=https://ai-atlas.tariki-code.tokyo npm run build"
+    "build:prod": "npm run build"
   }
 }

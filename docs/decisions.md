@@ -87,14 +87,14 @@
 ### D10. サイトの OGP 画像とファビコン（2026-11-14）
 
 - **OGP 画像：** `site/og-card.html` をサイトと同じ HTML・CSS で作り、`npm run og`（`scripts/build-og.mjs`）でヘッドレス Chrome により `site/og-image.png`（1200×630）にする。画像の中の文言は実際のサイトに合わせ、存在しない機能や、古くなる日付・件数は入れない。地球儀の `@` は公開データにある提供元の国から描く。初期化処理は CSP（`script-src 'self'`）の下でも動くよう外部モジュール `site/js/og-card.js` に置き、`og-card.html` とともに公開ビルドに含めない。`build-og.mjs` は描画の完了（`data-ready` と地球儀の印）を確かめてから撮影し、完了していなければ既存の画像を上書きせずにエラーで止まる。
-- **OGP の URL：** `og:image` は絶対 URL が必要なため、`SITE_URL=https://… npm run build` で絶対 URL と `og:url` に置き換える。公開ドメインが決まるまでは相対パスのまま。
+- **OGP の URL：** `og:image` は絶対 URL が必要。公開ドメインの決定後は `site/index.html` に `https://ai-atlas.tariki-code.tokyo/…` を直接書き、`twitter:image` も明示する。ビルドは絶対 URL でなければエラーで止まる。別のドメインで公開するときだけ `SITE_URL` で置き換える（2026-11-14 改訂：Cloudflare で環境変数が効かず相対パスのまま公開され、X で画像が出なかったため）。
 - **ファビコン：** ブラウザのタブ（16px）では細部がつぶれるため、16×16 のマス目で描いた地球儀の SVG（`site/favicon.svg`）を使う。32px の PNG とホーム画面用アイコン（180px）には、提案された窓と地球儀のドット絵を縮小して使う。
 
 ### D11. 公開名・ドメイン・公開先（2026-11-14）
 
 - **公開名：** 「AI Atlas」とする。商標に同名の登録がないことは利用者が確認済み。同じ分野に同名・類似名のサイト（CNET の「AI Atlas」、aiatlas.app など）があるため、「対話型AIサービス図鑑」を添えて区別する。
 - **ドメイン：** `ai-atlas.tariki-code.tokyo`（tariki-code.tokyo のサブドメイン）。
-- **公開先：** Cloudflare Pages。手順は [deploy.md](deploy.md)。`npm run build:prod` で og:image を絶対 URL にしてビルドする。
+- **公開先：** Cloudflare Pages。手順は [deploy.md](deploy.md)。ビルドコマンドは `npm run build`（環境変数は不要）。
 - **レスポンスヘッダー：** `site/_headers` で CSP などを設定する。開発サーバーも同じヘッダーを付けるため、手元で CSP の違反に気づける。
 
 ## 保留事項
