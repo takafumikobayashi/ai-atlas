@@ -428,6 +428,37 @@ nav:focus {
   color: var(--muted);
 }
 
+/* Collapsible advanced filters -------------------------------------------------- */
+
+.more-filters {
+  margin: 0 0 1em;
+}
+.more-filters__summary {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--bright);
+  list-style: none;
+}
+.more-filters__summary::-webkit-details-marker {
+  display: none;
+}
+.more-filters__mark::before {
+  content: "[+] ";
+  color: var(--green);
+}
+.more-filters[open] .more-filters__mark::before {
+  content: "[-] ";
+}
+.more-filters__summary:hover .more-filters__mark::before {
+  color: var(--bright);
+}
+.more-filters__count {
+  color: var(--amber);
+}
+.more-filters__body {
+  margin-top: 1em;
+}
+
 /* Results --------------------------------------------------------------------------- */
 
 .results-head {
@@ -531,6 +562,16 @@ nav:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 0 1.5ch;
+}
+.entry .caps {
+  margin: 0 0 0.7em;
+}
+.caps__more {
+  color: var(--muted);
+}
+.entry__free {
+  margin-right: 2ch;
+  color: var(--text);
 }
 .entry__foot {
   display: flex;

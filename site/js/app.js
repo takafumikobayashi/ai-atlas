@@ -33,7 +33,6 @@ const state = {
 
 const el = {
   status: document.getElementById('load-status'),
-  sampleBanner: document.getElementById('sample-banner'),
   listView: document.getElementById('list-view'),
   detailView: document.getElementById('detail-view'),
   search: document.getElementById('search'),
@@ -68,7 +67,12 @@ async function init() {
   }
 
   el.screenDate.textContent = TODAY.replaceAll('-', '/');
-  el.sampleBanner.hidden = !USE_SAMPLE;
+  if (USE_SAMPLE) {
+    // Built only in sample mode so the published page never contains this notice.
+    document.getElementById('main').prepend(
+      h('p', { class: 'sample-banner', role: 'note' }, h('span', { class: 'green' }, '--sample'), ' 画面確認用の架空データを表示しています。実在するサービスの情報ではありません。'),
+    );
+  }
   state.globe = mountGlobe(el.globe, { origins: deriveOptions(state.services).origins });
   renderIntroStats();
   renderLegend();
@@ -268,8 +272,8 @@ function renderIntroStats() {
       [
         ['掲載サービス', `${services.length}件`],
         ['提供元の拠点', `${origins.length}か国・地域`],
-        ['最新の確認日', latest ?? 'なし'],
-        ['要再確認の情報を含む', `${staleCount}件`],
+        ['データの最終確認日', latest ?? 'なし'],
+        [`確認から${state.vocab.staleAfterDays}日超の情報あり`, `${staleCount}件`],
       ],
       { caption: '収録状況' },
     ),
@@ -293,7 +297,7 @@ function renderFilters() {
   const options = deriveOptions(state.services);
   const v = state.vocab.raw;
 
-  const groups = [
+  const basic = [
     flagGroup({
       legend: 'できること',
       flag: '--can',
@@ -308,6 +312,8 @@ function renderFilters() {
       ),
       note: '「条件付き」で使える機能も含みます。',
     }),
+  ];
+  const advanced = [
     options.origins.length
       ? flagGroup({
           legend: '提供元の拠点',
@@ -340,7 +346,25 @@ function renderFilters() {
     }),
   ];
 
-  el.filters.replaceChildren(...groups.filter(Boolean));
+  el.moreSummary = h('summary', { class: 'more-filters__summary' });
+  el.filters.replaceChildren(
+    ...basic,
+    h('details', { class: 'more-filters' }, el.moreSummary, h('div', { class: 'more-filters__body' }, advanced.filter(Boolean))),
+  );
+  updateMoreSummary(emptyCriteria());
+}
+
+/** Summary of the collapsed group, showing how many hidden conditions are active. */
+function updateMoreSummary(c) {
+  if (!el.moreSummary) return;
+  const n = c.origins.length + c.languages.length + c.platforms.length + (c.freeOnly ? 1 : 0);
+  const parts = [
+    h('span', { class: 'more-filters__mark', 'aria-hidden': 'true' }),
+    '詳細条件',
+    h('span', { class: 'dim' }, '（拠点・言語・利用環境・料金）'),
+  ];
+  if (n) parts.push(h('span', { class: 'more-filters__count' }, ` ${n}件を選択中`));
+  el.moreSummary.replaceChildren(...parts);
 }
 
 function flagGroup({ legend, flag, name, items, extra = null, note = null }) {
@@ -436,6 +460,7 @@ function updateResults() {
   el.clear.disabled = !active;
   el.count.textContent = active ? `${results.length}件が該当（全${total}件）` : `${total}件のサービス`;
   renderCommand(state.criteria);
+  updateMoreSummary(state.criteria);
   state.globe?.setHighlight(state.criteria.origins);
 
   el.listEnd.hidden = results.length === 0;
@@ -454,14 +479,18 @@ function updateResults() {
   el.results.replaceChildren(...results.map(renderEntry));
 }
 
+const LIST_CAPS_MAX = 5;
+
+/** One result in the list: a short summary. Conditions, sources and unknowns live on the detail page. */
 function renderEntry(service) {
-  const jp = (service.availability ?? []).find((a) => a.regionCode === 'JP');
   const range = checkedRange(service);
   const stale = range && isStale(range.oldest, TODAY, state.vocab.staleAfterDays);
-  const caps = state.vocab.raw.capabilities;
-  const available = caps.filter((c) => AVAILABLE_STATUSES.has(capabilityStatus(service, c.id)));
-  const unknownCount = caps.filter((c) => capabilityStatus(service, c.id) === 'unknown').length;
+  // Every listed service is a chat service, so text chat is left to the detail page.
+  const available = state.vocab.raw.capabilities.filter((c) => c.id !== 'text_chat' && AVAILABLE_STATUSES.has(capabilityStatus(service, c.id)));
+  const shown = available.slice(0, LIST_CAPS_MAX);
+  const more = available.length - shown.length;
   const origin = service.provider?.originCountryCode;
+  const lifecycle = service.lifecycle?.status ?? 'unknown';
 
   return h(
     'li',
@@ -480,31 +509,28 @@ function renderEntry(service) {
         'p',
         { class: 'entry__provider' },
         service.provider?.name,
-        origin ? ['（拠点: ', regionLabel(origin), '）'] : '',
-        ` / ${label('lifecycleStatuses', service.lifecycle?.status ?? 'unknown')}`,
+        origin ? ['（', regionLabel(origin), '）'] : '',
+        lifecycle !== 'active' ? ` / ${label('lifecycleStatuses', lifecycle)}` : '',
       ),
       h('p', { class: 'entry__desc' }, service.description?.ja),
-      h(
-        'dl',
-        { class: 'kv' },
-        h('dt', {}, '日本で'),
-        h('dd', {}, statusBadge(jp?.status ?? 'unknown')),
-        h('dt', {}, '無料'),
-        h('dd', {}, hasFreeOffer(service) ? 'プランあり（条件は詳細に）' : h('span', { class: 'dim' }, '確認できていません')),
-        h('dt', {}, 'できる'),
-        h(
-          'dd',
-          {},
-          available.length
-            ? h('ul', { class: 'caps' }, available.map((c) => h('li', {}, statusBadge(capabilityStatus(service, c.id), { text: c.label }))))
-            : h('span', { class: 'dim' }, '確認済みの機能はまだありません'),
-        ),
-        unknownCount ? [h('dt', {}, '未確認'), h('dd', { class: 'dim' }, `${unknownCount}件（使えないという意味ではありません）`)] : null,
-      ),
+      shown.length
+        ? h(
+            'ul',
+            { class: 'caps', 'aria-label': 'できること' },
+            shown.map((c) => h('li', {}, statusBadge(capabilityStatus(service, c.id), { text: c.label }))),
+            more > 0 ? h('li', { class: 'caps__more' }, `ほか${more}件`) : null,
+          )
+        : null,
       h(
         'p',
         { class: 'entry__foot' },
-        h('span', {}, range ? `// 確認日 ${range.latest === range.oldest ? range.latest : `${range.oldest}〜${range.latest}`}` : '// 確認日なし', stale ? h('span', { class: 'stale' }, '要再確認') : null),
+        h(
+          'span',
+          {},
+          hasFreeOffer(service) ? h('span', { class: 'entry__free' }, '無料プランあり') : null,
+          range ? `// 確認日 ${range.latest}` : '// 確認日なし',
+          stale ? h('span', { class: 'stale' }, '要再確認') : null,
+        ),
         h('a', { href: `#/service/${service.id}`, class: 'back', tabindex: '-1', 'aria-hidden': 'true' }, '[ 詳細を見る ]'),
       ),
     ),
