@@ -246,12 +246,13 @@ function asciiTable(headers, rows, { caption, maxCell = 30 } = {}) {
 
   const table = h(
     'table',
-    { class: 'visually-hidden' },
+    {},
     caption ? h('caption', {}, caption) : null,
     h('thead', {}, h('tr', {}, headers.map((t) => h('th', { scope: 'col' }, t)))),
     h('tbody', {}, rows.map((row) => h('tr', {}, row.map((cell, i) => (i === 0 ? h('th', { scope: 'row' }, cell) : h('td', {}, cell)))))),
   );
-  return [pre, table];
+  // Tables ignore width/overflow, so hide the accessible copy inside a wrapper.
+  return [pre, h('div', { class: 'visually-hidden' }, table)];
 }
 
 // ---------------------------------------------------------------------------

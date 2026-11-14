@@ -34,6 +34,8 @@
 
 html {
   background: var(--bg);
+  /* keep focused or scrolled-to items clear of the fixed function-key line */
+  scroll-padding-bottom: 64px;
 }
 body {
   margin: 0;
@@ -114,8 +116,12 @@ button {
   position: absolute !important;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   white-space: nowrap;
 }
 .skip-link {
@@ -622,7 +628,7 @@ nav:focus {
 }
 .preview figcaption {
   margin-top: 4px;
-  color: var(--dim);
+  color: var(--muted);
   font-size: 13px;
   line-height: 1.4;
   overflow-wrap: anywhere;
@@ -920,6 +926,9 @@ nav:focus {
   }
   body {
     padding-bottom: 0;
+  }
+  html {
+    scroll-padding-bottom: 0;
   }
 }
 
