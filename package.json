@@ -12,7 +12,7 @@
     "validate": "node scripts/validate.mjs",
     "build": "node scripts/validate.mjs && node scripts/build.mjs",
     "preview": "node scripts/serve.mjs --dist",
-    "test": "node --test test/",
+    "test": "node --test \"test/**/*.test.mjs\"",
     "review": "node scripts/review.mjs",
     "previews": "node scripts/fetch-previews.mjs",
     "og": "node scripts/build-og.mjs"

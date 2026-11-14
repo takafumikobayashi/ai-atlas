@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Validates the published catalogue (data/services.json) and the development fixtures.
-// Usage: node scripts/validate.mjs [--strict]   (--strict treats warnings as errors)
+// Usage: node scripts/validate.mjs [--strict]
+//   --strict treats warnings in the PUBLISHED catalogue as errors (use before release).
+//   Fixture warnings never fail the run: the fixtures deliberately include a stale example.
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { validateCatalog } from './lib/validate-data.mjs';
@@ -9,8 +11,8 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const strict = process.argv.includes('--strict');
 
 const targets = [
-  { file: 'data/services.json', allowExampleDomains: false },
-  { file: 'data/fixtures/sample-services.json', allowExampleDomains: true },
+  { file: 'data/services.json', allowExampleDomains: false, published: true },
+  { file: 'data/fixtures/sample-services.json', allowExampleDomains: true, published: false },
 ];
 
 const vocab = await readJson('data/vocabulary.json');
@@ -24,7 +26,8 @@ for (const target of targets) {
   for (const e of errors) console.log(`  ✕ ${e}`);
   for (const w of warnings) console.log(`  ! ${w}`);
   if (errors.length === 0 && warnings.length === 0) console.log('  ✓ 問題なし');
-  if (errors.length > 0 || (strict && warnings.length > 0)) failed = true;
+  if (!target.published && warnings.length > 0) console.log('  （開発用の架空データの警告です。意図的な例を含むため、失敗扱いにはしません）');
+  if (errors.length > 0 || (strict && target.published && warnings.length > 0)) failed = true;
 }
 
 process.exitCode = failed ? 1 : 0;
