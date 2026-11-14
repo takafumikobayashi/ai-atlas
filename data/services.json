@@ -1,4 +1,1311 @@
 {
   "schemaVersion": 1,
-  "services": []
+  "services": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "aliases": [],
+      "provider": {
+        "name": "OpenAI",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "openai-privacy"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://chatgpt.com/",
+      "description": {
+        "ja": "OpenAI が提供する対話型AIアシスタント。文章での対話に加え、Web検索、画像の生成、音声での会話、ファイルのアップロードなどに対応しています。"
+      },
+      "inclusionReason": {
+        "ja": "世界的に利用者の多い汎用の対話型AIサービスで、比較の基準として参照されることが多いため。"
+      },
+      "categories": [
+        "general_assistant"
+      ],
+      "platforms": {
+        "values": [
+          "web",
+          "ios",
+          "android",
+          "macos"
+        ],
+        "evidenceIds": [
+          "chatgpt-pricing",
+          "chatgpt-download"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ja"
+          ],
+          "evidenceIds": [
+            "chatgpt-language"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "supported",
+          "conditions": null,
+          "evidenceIds": [
+            "chatgpt-countries"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料プランを含む全プランで利用できます（不正利用の防止のための制限あり）。"
+          },
+          "evidenceIds": [
+            "chatgpt-pricing"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "web_search",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "Free・Go・Plus・Pro などで利用できます。プランごとの利用上限が適用されます。"
+          },
+          "evidenceIds": [
+            "chatgpt-search"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料プランでは回数に制限があります。"
+          },
+          "evidenceIds": [
+            "chatgpt-pricing"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [
+              "web",
+              "ios",
+              "android"
+            ],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "チャットでの音声会話は Web・iOS・Android で利用できます。無料プランでは回数に制限があります。"
+          },
+          "evidenceIds": [
+            "chatgpt-pricing",
+            "chatgpt-voice"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料プランではファイルのアップロードに制限があります。"
+          },
+          "evidenceIds": [
+            "chatgpt-pricing"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "data_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "料金ページの比較表に「Data analysis」があり、無料プランは制限付きです。"
+          },
+          "evidenceIds": [
+            "chatgpt-pricing"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「ChatGPT Work」として提供されます。Free・Go はデスクトップアプリでの制限付き利用、Plus 以上はデスクトップ・Web・モバイルで利用できます。"
+          },
+          "evidenceIds": [
+            "chatgpt-pricing",
+            "chatgpt-voice"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "document_creation",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "「ChatGPT Work」で文書・プレゼンテーション・スプレッドシートを作成できます。Free・Go はデスクトップアプリでの制限付き利用です。"
+          },
+          "evidenceIds": [
+            "chatgpt-pricing",
+            "chatgpt-voice"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "Free",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "画像生成・音声・ファイルのアップロードなどに制限があります。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "chatgpt-pricing"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Go",
+            "access": "paid",
+            "amount": 8,
+            "currency": "USD",
+            "billingPeriod": "month",
+            "regionCode": "US",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "広告が表示される場合があります。料金ページの地域表示が「United States」のときの価格です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "chatgpt-pricing"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Plus",
+            "access": "paid",
+            "amount": 20,
+            "currency": "USD",
+            "billingPeriod": "month",
+            "regionCode": "US",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "料金ページの地域表示が「United States」のときの価格です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "chatgpt-pricing"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Pro",
+            "access": "paid",
+            "amount": 100,
+            "currency": "USD",
+            "billingPeriod": "month",
+            "regionCode": "US",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "3段階の利用枠から選ぶ方式で、表示は最低価格（From $100）です。料金ページの地域表示が「United States」のときの価格です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "chatgpt-pricing"
+            ],
+            "checkedAt": "2026-11-14"
+          }
+        ],
+        "evidenceIds": [
+          "chatgpt-pricing"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "strengthClaims": [],
+      "evidence": [
+        {
+          "id": "openai-privacy",
+          "url": "https://openai.com/policies/privacy-policy/",
+          "title": "Privacy policy | OpenAI",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "EEA・スイス以外の利用者の管理者として、OpenAI OpCo, LLC（米国カリフォルニア州サンフランシスコ）を記載。"
+        },
+        {
+          "id": "chatgpt-countries",
+          "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
+          "title": "ChatGPT Supported Countries | OpenAI Help Center",
+          "sourceType": "official_availability",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web・モバイルで利用できる国・地域の一覧に Japan を含む。"
+        },
+        {
+          "id": "chatgpt-pricing",
+          "url": "https://chatgpt.com/pricing/",
+          "title": "Plans and Pricing | ChatGPT",
+          "sourceType": "official_pricing",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Free・Go・Plus・Pro の内容と米ドル価格（地域表示 United States）。Web・iOS・Android で利用可能と記載。"
+        },
+        {
+          "id": "chatgpt-download",
+          "url": "https://chatgpt.com/download/",
+          "title": "Download ChatGPT",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "macOS 版デスクトップアプリと iOS・Android アプリの案内（macOS から閲覧）。"
+        },
+        {
+          "id": "chatgpt-search",
+          "url": "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+          "title": "Searching the web with ChatGPT | OpenAI Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web検索は Free・Go・Plus・Pro・Business・Enterprise・Edu で利用でき、Web・デスクトップ・モバイルで使えると記載。"
+        },
+        {
+          "id": "chatgpt-voice",
+          "url": "https://help.openai.com/en/articles/20001274-chatgpt-voice",
+          "title": "ChatGPT Voice | OpenAI Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "チャットでの音声会話は Web・iOS・Android で利用可能。Work では文書・プレゼンテーション・スプレッドシートの作成やブラウザ操作ができると記載。"
+        },
+        {
+          "id": "chatgpt-language",
+          "url": "https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt",
+          "title": "How to change your language setting in ChatGPT | OpenAI Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "ChatGPT の表示言語の一覧に Japanese を含む。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "chatgpt-pricing"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://cdn.openai.com/chatgpt/share-og.png",
+        "sourceUrl": "https://chatgpt.com/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "aliases": [],
+      "provider": {
+        "name": "Anthropic",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "anthropic-privacy"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://claude.ai/",
+      "description": {
+        "ja": "Anthropic が提供する対話型AIアシスタント。文章での対話に加え、Web検索、ファイルの読み込みと分析、文書やスライドの作成などに対応しています。"
+      },
+      "inclusionReason": {
+        "ja": "世界的に利用者の多い汎用の対話型AIサービスで、日本語の表示にも対応しているため。"
+      },
+      "categories": [
+        "general_assistant"
+      ],
+      "platforms": {
+        "values": [
+          "web",
+          "ios",
+          "android",
+          "windows",
+          "macos"
+        ],
+        "evidenceIds": [
+          "claude-download",
+          "claude-interfaces"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "en",
+            "fr",
+            "de",
+            "hi",
+            "id",
+            "it",
+            "ja",
+            "ko",
+            "pt-BR",
+            "es-419",
+            "es-ES"
+          ],
+          "evidenceIds": [
+            "claude-language"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        "conversation": {
+          "values": [
+            "ja",
+            "en"
+          ],
+          "evidenceIds": [
+            "claude-language"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "supported",
+          "conditions": null,
+          "evidenceIds": [
+            "anthropic-countries",
+            "claude-where"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料プランを含む全プランで利用できます。利用量には5時間ごと・週ごとの上限があります。"
+          },
+          "evidenceIds": [
+            "claude-pricing-jp"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "web_search",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "利用量の上限に含まれます。Team・Enterprise では管理者による有効化が必要です。"
+          },
+          "evidenceIds": [
+            "claude-pricing-jp",
+            "claude-websearch"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "unsupported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "写真やイラストを生成する機能はありません。図やグラフなどの視覚表現は作成できます（Web・デスクトップでベータ）。"
+          },
+          "evidenceIds": [
+            "claude-images"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [
+              "ios",
+              "android",
+              "web",
+              "windows",
+              "macos"
+            ],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "ベータ機能です。全プランで利用できます。英語以外の言語はベータです。"
+          },
+          "evidenceIds": [
+            "claude-voice"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "1ファイル500MBまで、1チャット20ファイルまで、PDF は1000ページまで。"
+          },
+          "evidenceIds": [
+            "claude-upload"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "data_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "コード実行機能で CSV などのデータファイルを分析できます。全プランで利用できます。"
+          },
+          "evidenceIds": [
+            "claude-files"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "code_generation",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [
+              "Pro",
+              "Max",
+              "Ultra",
+              "Team",
+              "Enterprise"
+            ],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "コーディング支援の「Claude Code」は Pro 以上の有料プランで利用できます。"
+          },
+          "evidenceIds": [
+            "claude-code",
+            "claude-pricing-jp"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [
+              "Pro",
+              "Max",
+              "Ultra",
+              "Team",
+              "Enterprise"
+            ],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "作業の引き継ぎや予約実行（Cowork など）は Pro 以上の有料プランで利用できます。"
+          },
+          "evidenceIds": [
+            "claude-pricing-jp",
+            "claude-download"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "document_creation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "Excel・PowerPoint・Word・PDF のファイルを作成できます。全プランで利用できます。"
+          },
+          "evidenceIds": [
+            "claude-files",
+            "claude-pricing-jp"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "Free",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "5時間ごと・週ごとの利用量に上限があります。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "claude-pricing-jp"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Pro（月払い）",
+            "access": "paid",
+            "amount": 22,
+            "currency": "USD",
+            "billingPeriod": "month",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "日本から閲覧した際の表示です（米ドル表記）。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "claude-pricing-jp"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Pro（年払い）",
+            "access": "paid",
+            "amount": 220,
+            "currency": "USD",
+            "billingPeriod": "year",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "日本から閲覧した際の表示です（米ドル表記）。月あたり$18。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "claude-pricing-jp"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Max",
+            "access": "paid",
+            "amount": 110,
+            "currency": "USD",
+            "billingPeriod": "month",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "日本から閲覧した際の表示です（米ドル表記）。Pro の5倍の利用量。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "claude-pricing-jp"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Ultra",
+            "access": "paid",
+            "amount": 220,
+            "currency": "USD",
+            "billingPeriod": "month",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "日本から閲覧した際の表示です（米ドル表記）。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "claude-pricing-jp"
+            ],
+            "checkedAt": "2026-11-14"
+          }
+        ],
+        "evidenceIds": [
+          "claude-pricing-jp"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "strengthClaims": [],
+      "evidence": [
+        {
+          "id": "anthropic-privacy",
+          "url": "https://www.anthropic.com/legal/privacy",
+          "title": "Privacy Policy \\ Anthropic",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Anthropic PBC の登記住所として米国カリフォルニア州サンフランシスコを記載。"
+        },
+        {
+          "id": "anthropic-countries",
+          "url": "https://www.anthropic.com/supported-countries",
+          "title": "Supported Regions Policy \\ Anthropic",
+          "sourceType": "official_availability",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Claude.ai などのアプリを提供する地域の一覧に Japan を含む。"
+        },
+        {
+          "id": "claude-where",
+          "url": "https://support.claude.com/en/articles/8461763-where-can-i-access-claude",
+          "title": "Where can I access Claude? | Claude Help Center",
+          "sourceType": "official_availability",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Claude を利用できる国の一覧に Japan を含む。"
+        },
+        {
+          "id": "claude-pricing-jp",
+          "url": "https://claude.com/pricing",
+          "title": "Plans & pricing | Claude by Anthropic",
+          "sourceType": "official_pricing",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "日本から閲覧した際のプラン内容と米ドル価格。無料プランで Web・デスクトップ・モバイルのチャット、Web検索、ファイル作成、コード実行が使えると記載。"
+        },
+        {
+          "id": "claude-download",
+          "url": "https://claude.com/download",
+          "title": "Download Claude | Claude by Anthropic",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "macOS・Windows のデスクトップアプリ、iOS アプリの案内。Linux 版はベータ。Cowork と Claude Code は Pro 以上と記載。"
+        },
+        {
+          "id": "claude-interfaces",
+          "url": "https://support.claude.com/en/articles/8114487-what-interfaces-can-i-use-to-access-claude",
+          "title": "What interfaces can I use to access Claude? | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web（claude.ai）と Android アプリなどの利用方法を記載。"
+        },
+        {
+          "id": "claude-language",
+          "url": "https://support.claude.com/en/articles/10769299-how-to-use-claude-in-your-preferred-language",
+          "title": "How to use Claude in your preferred language | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "表示言語の一覧（Japanese を含む11言語）と、表示言語にかかわらずどの言語でも会話できるとの記載。"
+        },
+        {
+          "id": "claude-websearch",
+          "url": "https://support.claude.com/en/articles/10684626-enable-and-use-web-search",
+          "title": "Enable and use web search | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web検索の使い方と、利用量の上限に含まれること、Team・Enterprise では管理者の有効化が必要なこと。"
+        },
+        {
+          "id": "claude-images",
+          "url": "https://support.claude.com/en/articles/9002504-can-claude-produce-images",
+          "title": "Can Claude produce images? | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "画像生成ツールのように写真やイラストを生成しないとの記載。図やグラフなどは作成可能。"
+        },
+        {
+          "id": "claude-voice",
+          "url": "https://support.claude.com/en/articles/11101966-use-voice-mode",
+          "title": "Use voice mode | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "音声モードは全プランで使えるベータ機能。モバイル・デスクトップ・Web で利用可能。英語以外はベータ。"
+        },
+        {
+          "id": "claude-upload",
+          "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+          "title": "Upload files to Claude | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "アップロードできるファイルの種類と上限（500MB、20ファイル、PDF 1000ページ）。"
+        },
+        {
+          "id": "claude-files",
+          "url": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude",
+          "title": "Create and edit files with Claude | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Excel・PowerPoint・Word・PDF の作成と、CSV などのデータ分析が全プランで使えると記載。"
+        },
+        {
+          "id": "claude-code",
+          "url": "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-max-or-ultra-plan",
+          "title": "Use Claude Code with your Pro, Max, or Ultra plan | Claude Help Center",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Pro・Max・Ultra プランで Claude Code を利用できると記載。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "claude-pricing-jp"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://assets.claude.com/f66071070c4701ea2c37fc01b3c0f83623cf29d3.jpg?w=2400&h=1260&fit=crop",
+        "sourceUrl": "https://claude.com/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "aliases": [],
+      "provider": {
+        "name": "Google",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "google-terms"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialUrl": "https://gemini.google.com/",
+      "description": {
+        "ja": "Google が提供する対話型AIアシスタント。文章での対話に加え、画像や動画の生成、音声での会話（Gemini Live）、ファイルの読み込み、資料の作成などに対応しています。"
+      },
+      "inclusionReason": {
+        "ja": "世界的に利用者の多い汎用の対話型AIサービスで、日本向けの料金が円で示されているため。"
+      },
+      "categories": [
+        "general_assistant"
+      ],
+      "platforms": {
+        "values": [
+          "web",
+          "ios",
+          "android",
+          "windows"
+        ],
+        "evidenceIds": [
+          "gemini-web-availability",
+          "gemini-mobile",
+          "gemini-windows"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [
+            "ja"
+          ],
+          "evidenceIds": [
+            "gemini-web-availability",
+            "gemini-mobile"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "supported",
+          "conditions": {
+            "ja": "個人の Google アカウントが必要です。年齢条件は、ヘルプでは13歳以上（国により異なる）、料金ページでは Google AI プランは18歳以上と記載されています。"
+          },
+          "evidenceIds": [
+            "gemini-web-availability",
+            "gemini-mobile",
+            "gemini-subscriptions"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料版で利用できます。上限はプランによって異なります。"
+          },
+          "evidenceIds": [
+            "gemini-subscriptions"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料版で「画像の生成と編集」が利用できます。"
+          },
+          "evidenceIds": [
+            "gemini-subscriptions"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "video_generation",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [
+              "Google AI Plus",
+              "Google AI Pro",
+              "Google AI Ultra"
+            ],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "個人アカウントでは Google AI プランへの加入が必要です。18歳未満は利用できません。"
+          },
+          "evidenceIds": [
+            "gemini-subscriptions",
+            "gemini-video"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [
+              "android"
+            ],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料版で「Gemini Live」が利用できます。Web アプリでは利用できません（iOS は未確認）。13歳以上。段階的に提供中。"
+          },
+          "evidenceIds": [
+            "gemini-subscriptions",
+            "gemini-live"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "ログインが必要です。有料プランではアップロードできるファイル数などの上限が上がります。"
+          },
+          "evidenceIds": [
+            "gemini-upload"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "data_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "スプレッドシートをアップロードして、回答・要約・分析を得られます。"
+          },
+          "evidenceIds": [
+            "gemini-upload"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "code_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "コードのファイルもアップロードできます。"
+          },
+          "evidenceIds": [
+            "gemini-overview",
+            "gemini-upload"
+          ],
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "id": "document_creation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料版で「Canvas」が利用できます。"
+          },
+          "evidenceIds": [
+            "gemini-subscriptions"
+          ],
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料版",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "Google アカウントが必要です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "gemini-subscriptions"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Google AI Plus",
+            "access": "paid",
+            "amount": 725,
+            "currency": "JPY",
+            "billingPeriod": "month",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "無料版の2倍の使用量上限。Google AI プランは18歳以上のみ（料金ページの記載）。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "gemini-subscriptions"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Google AI Pro",
+            "access": "paid",
+            "amount": 2900,
+            "currency": "JPY",
+            "billingPeriod": "month",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "Google AI プランは18歳以上のみ（料金ページの記載）。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "gemini-subscriptions"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Google AI Ultra（5倍）",
+            "access": "paid",
+            "amount": 14500,
+            "currency": "JPY",
+            "billingPeriod": "month",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "AI Pro の5倍の使用量上限。Google AI プランは18歳以上のみ（料金ページの記載）。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "gemini-subscriptions"
+            ],
+            "checkedAt": "2026-11-14"
+          },
+          {
+            "planName": "Google AI Ultra（20倍）",
+            "access": "paid",
+            "amount": 32000,
+            "currency": "JPY",
+            "billingPeriod": "month",
+            "regionCode": "JP",
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "AI Pro の20倍の使用量上限。Google AI プランは18歳以上のみ（料金ページの記載）。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "gemini-subscriptions"
+            ],
+            "checkedAt": "2026-11-14"
+          }
+        ],
+        "evidenceIds": [
+          "gemini-subscriptions"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "strengthClaims": [],
+      "evidence": [
+        {
+          "id": "google-terms",
+          "url": "https://policies.google.com/terms?hl=en",
+          "title": "Google Terms of Service – Privacy & Terms – Google",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "サービス提供者として Google LLC（米国カリフォルニア州マウンテンビュー）を記載。"
+        },
+        {
+          "id": "gemini-subscriptions",
+          "url": "https://gemini.google/subscriptions/",
+          "title": "Google AI Pro と Ultra で Gemini 4 Argon などにアクセス",
+          "sourceType": "official_pricing",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "日本向けのプランと円建ての月額料金。無料版の機能（画像の生成と編集、Deep Research、Gemini Live、Canvas）と、Google AI プランは18歳以上のみとの記載。"
+        },
+        {
+          "id": "gemini-web-availability",
+          "url": "https://support.google.com/gemini/answer/13575153",
+          "title": "Where you can use the Gemini web app - Gemini Apps Help",
+          "sourceType": "official_availability",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web アプリを利用できる国の一覧に Japan、対応言語の一覧に Japanese を含む。"
+        },
+        {
+          "id": "gemini-mobile",
+          "url": "https://support.google.com/gemini/answer/14579026",
+          "title": "Gemini mobile app availability - Gemini Apps Help",
+          "sourceType": "official_availability",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Android・iOS のアプリについて記載。提供国に Japan、対応言語に Japanese を含む。"
+        },
+        {
+          "id": "gemini-windows",
+          "url": "https://support.google.com/gemini/answer/18263854",
+          "title": "Use the Gemini app for Windows - Gemini Apps Help",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Windows 10 以降で使える Gemini アプリについて記載。"
+        },
+        {
+          "id": "gemini-video",
+          "url": "https://support.google.com/gemini/answer/16126339",
+          "title": "Generate videos with Gemini Apps - Gemini Apps Help",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "個人アカウントでの動画生成には Google AI プランが必要で、18歳未満は利用できないと記載。"
+        },
+        {
+          "id": "gemini-live",
+          "url": "https://support.google.com/gemini/answer/15274899",
+          "title": "Talk naturally with Gemini Live - Gemini Apps Help",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Android アプリでの Gemini Live の要件（13歳以上）と、Web アプリでは利用できないこと。"
+        },
+        {
+          "id": "gemini-upload",
+          "url": "https://support.google.com/gemini/answer/14903178?hl=en",
+          "title": "Upload & analyze files in Gemini Apps - Gemini Apps Help",
+          "sourceType": "official_help",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "文書・スプレッドシート・コードなどをアップロードして回答や要約を得られる。ログインが必要で、有料プランでは上限が上がる。"
+        },
+        {
+          "id": "gemini-overview",
+          "url": "https://gemini.google/overview/",
+          "title": "Gemini とのその仕組み",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-14",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "Gemini がコーディングの問題のデバッグなどに使われていると記載。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "gemini-subscriptions"
+        ],
+        "checkedAt": "2026-11-14"
+      },
+      "officialPreview": {
+        "imageUrl": "https://www.gstatic.com/lamda/images/gemini_aurora_thumbnail_4g_e74822ff0ca4259beb718.png",
+        "sourceUrl": "https://gemini.google.com/",
+        "alt": null,
+        "checkedAt": "2026-11-14"
+      }
+    }
+  ]
 }

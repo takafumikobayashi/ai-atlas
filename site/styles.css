@@ -556,6 +556,49 @@ nav:focus {
   color: var(--bright);
 }
 
+/* Official-page preview (og:image) --------------------------------------------------- */
+
+.preview {
+  margin: 0;
+}
+.preview a {
+  display: block;
+  border: 1px solid var(--line);
+  line-height: 0;
+}
+.preview a:hover {
+  border-color: var(--green-dim);
+}
+.preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  background: #161616;
+}
+.preview figcaption {
+  margin-top: 4px;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.preview--thumb {
+  float: right;
+  width: 208px;
+  margin: 0.4em 0 0.6em 2ch;
+}
+.preview--large {
+  margin: 0 0 1.8em;
+  max-width: 560px;
+}
+.entry article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /* Status: [✓ 対応] — symbol and words, never colour alone ---------------------------- */
 
 .status {
@@ -805,6 +848,11 @@ nav:focus {
   }
   .menu__cmd {
     display: none;
+  }
+  .preview--thumb {
+    float: none;
+    width: 100%;
+    margin: 0.4em 0 0.8em;
   }
   .search {
     grid-template-columns: 1fr;

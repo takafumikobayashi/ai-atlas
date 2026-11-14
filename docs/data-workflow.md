@@ -25,6 +25,7 @@
 4. 機能を同じチャット内で使えない場合は、`delivery` を `separate_product`／`integration`／`api_only` にする。
 5. 「得意」などの主張は `capabilities` ではなく `strengthClaims` に書き、提供元の主張か編集部の所見かを区別する。
 6. 掲載する理由を `inclusionReason.ja` に書く（任意。ただし推奨）。
+7. 公式ページの OGP 画像を記録する（任意）。`npm run previews` で取得結果を確かめ、問題なければ `npm run previews -- --write` で書き込む。自動取得を拒否するサイトは、ブラウザでページを開いて `og:image` を確かめ、`officialPreview` に手で記録する。
 
 ## 3. 検証する
 

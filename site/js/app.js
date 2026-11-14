@@ -463,6 +463,7 @@ function renderEntry(service) {
         h('h3', { class: 'entry__title', id: `entry-${service.id}` }, h('a', { href: `#/service/${service.id}`, dataset: { serviceId: service.id } }, service.name)),
         h('span', { class: 'entry__id', 'aria-hidden': 'true' }, service.id.toUpperCase()),
       ),
+      previewFigure(service, 'thumb'),
       h('p', { class: 'entry__provider' }, `${service.provider?.name}${origin ? `（拠点: ${regionName(origin)}）` : ''} / ${label('lifecycleStatuses', service.lifecycle?.status ?? 'unknown')}`),
       h('p', { class: 'entry__desc' }, service.description?.ja),
       h(
@@ -490,6 +491,36 @@ function renderEntry(service) {
       ),
     ),
   );
+}
+
+/**
+ * The official page's Open Graph image, shown as a link preview.
+ * The image is loaded from the provider's own server (not copied); if it fails, the figure is removed.
+ */
+function previewFigure(service, size) {
+  const pv = service.officialPreview;
+  if (!pv?.imageUrl) return null;
+  const host = new URL(pv.sourceUrl ?? service.officialUrl).hostname;
+  const large = size === 'large';
+  const img = h('img', {
+    src: pv.imageUrl,
+    alt: large ? pv.alt ?? `${service.name} 公式サイトのプレビュー画像` : '',
+    width: 1200,
+    height: 630,
+    loading: 'lazy',
+    decoding: 'async',
+    referrerpolicy: 'no-referrer',
+  });
+  const figure = h(
+    'figure',
+    { class: `preview preview--${size}` },
+    large
+      ? h('a', { href: service.officialUrl, target: '_blank', rel: 'noopener noreferrer' }, img, h('span', { class: 'visually-hidden' }, '（公式サイト・外部サイト・新しいタブで開きます）'))
+      : h('a', { href: `#/service/${service.id}`, tabindex: '-1', 'aria-hidden': 'true' }, img),
+    h('figcaption', {}, `// og:image ${host}`, large ? ` / 確認日 ${pv.checkedAt}` : null),
+  );
+  img.addEventListener('error', () => figure.remove(), { once: true });
+  return figure;
 }
 
 // ---------------------------------------------------------------------------
@@ -796,6 +827,7 @@ function renderDetail(service) {
     h('p', {}, h('a', { href: '#', class: 'back' }, '<- 一覧に戻る')),
     h('p', { class: 'prompt', 'aria-hidden': 'true' }, h('span', { class: 'green' }, '===>'), ' atlas show ', h('span', { style: 'color:var(--amber)' }, service.id)),
     h('h2', { class: 'detail__title', tabindex: '-1' }, service.name),
+    previewFigure(service, 'large'),
     ...sections,
   );
 }

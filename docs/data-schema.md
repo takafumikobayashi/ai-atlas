@@ -98,6 +98,7 @@
 - `name`, `aliases`: 現行名と旧名・別表記。別サービスやモデル名はエイリアスに混ぜない。
 - `provider.originCountryCode`: 提供元の拠点を表す場合の国コード（ISO 3166-1 alpha-2）。サービスの提供地域を意味しない。値を入れる場合は `provider.evidenceIds` と `provider.checkedAt` が必須。
 - `officialUrl`: ユーザー向けサービスの公式URL（https）。
+- `officialPreview`（任意）: 公式ページの OGP 画像。`{ imageUrl, sourceUrl, alt, checkedAt }`。`sourceUrl` は `og:image` を読み取ったページで、公式のユーザー向けページに限る。画像はコピーせず、提供元のサーバーから直接表示する。外部サイトからの表示を禁止している画像（`Cross-Origin-Resource-Policy: same-origin`）は使えない。
 - `description.ja`: 中立的な短い紹介文。宣伝文句を転記しない。
 - `inclusionReason.ja`: 初期版に載せる編集上の理由（任意）。
 - `categories`: 汎用、検索、複数モデル、キャラクター対話等のサービス分類（`vocabulary.json` の `categories`）。

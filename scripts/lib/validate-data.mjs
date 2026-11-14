@@ -68,6 +68,18 @@ export function validateCatalog(catalog, vocab, options = {}) {
     }
     checkUrl(service.officialUrl, 'officialUrl', err, allowExample);
 
+    // Optional Open Graph preview image of the official page (displayed as a link preview).
+    if (service.officialPreview != null) {
+      const pv = service.officialPreview;
+      if (!isObject(pv)) err('officialPreview は null または { imageUrl, sourceUrl, alt, checkedAt } にしてください');
+      else {
+        checkUrl(pv.imageUrl, 'officialPreview.imageUrl', err, allowExample);
+        checkUrl(pv.sourceUrl, 'officialPreview.sourceUrl', err, allowExample);
+        if (pv.alt != null && !nonEmptyString(pv.alt)) err('officialPreview.alt は null または文字列にしてください');
+        checkDate(pv.checkedAt, 'officialPreview.checkedAt', err, today, { required: true });
+      }
+    }
+
     // --- evidence -------------------------------------------------------------
     const evidenceIds = new Set();
     if (!Array.isArray(service.evidence)) {
