@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "_note": "開発・テスト専用の架空データです。実在するサービス・企業・機能・料金を示すものではありません。公開ビルド (dist/) には含まれません。",
+  "services": [
+    {
+      "id": "sample-alpha",
+      "name": "サンプル・アルファ",
+      "aliases": ["Sample Alpha"],
+      "provider": {
+        "name": "架空プロバイダーA",
+        "originCountryCode": "JP",
+        "evidenceIds": ["alpha-about"],
+        "checkedAt": "2026-11-01"
+      },
+      "officialUrl": "https://alpha.example.invalid/",
+      "description": { "ja": "UI確認用の架空サービス。汎用の対話アシスタントという設定です。" },
+      "inclusionReason": { "ja": "画面表示確認のための架空データ。" },
+      "categories": ["general_assistant"],
+      "platforms": { "values": ["web", "ios", "android"], "evidenceIds": ["alpha-apps"], "checkedAt": "2026-11-01" },
+      "languages": {
+        "interface": { "values": ["ja", "en"], "evidenceIds": ["alpha-help"], "checkedAt": "2026-11-01" },
+        "conversation": { "values": ["ja", "en", "zh"], "evidenceIds": ["alpha-help"], "checkedAt": "2026-11-01" }
+      },
+      "availability": [
+        { "regionCode": "JP", "status": "supported", "conditions": null, "evidenceIds": ["alpha-regions"], "checkedAt": "2026-11-01" },
+        { "regionCode": "US", "status": "supported", "conditions": null, "evidenceIds": ["alpha-regions"], "checkedAt": "2026-11-01" }
+      ],
+      "capabilities": [
+        { "id": "text_chat", "status": "supported", "delivery": "in_product", "scope": { "regions": [], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": ["alpha-help"], "checkedAt": "2026-11-01" },
+        { "id": "image_generation", "status": "conditional", "delivery": "in_product", "scope": { "regions": ["JP"], "plans": ["Plus"], "platforms": ["web"], "languages": [] }, "conditions": { "ja": "有料プランのWeb版のみ（架空の条件）" }, "evidenceIds": ["alpha-help", "alpha-pricing"], "checkedAt": "2026-11-01" },
+        { "id": "voice_conversation", "status": "supported", "delivery": "in_product", "scope": { "regions": [], "plans": [], "platforms": ["ios", "android"], "languages": [] }, "conditions": null, "evidenceIds": ["alpha-help"], "checkedAt": "2026-11-01" },
+        { "id": "video_generation", "status": "unsupported", "delivery": "unknown", "scope": { "regions": ["JP"], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": ["alpha-help"], "checkedAt": "2026-11-01" }
+      ],
+      "pricing": {
+        "offers": [
+          { "planName": "Free", "access": "free", "amount": null, "currency": null, "billingPeriod": null, "regionCode": "JP", "taxTreatment": "unknown", "limits": { "ja": "1日あたりの回数制限あり（架空）" }, "isPromotional": false, "evidenceIds": ["alpha-pricing"], "checkedAt": "2026-11-01" },
+          { "planName": "Plus", "access": "paid", "amount": 1500, "currency": "JPY", "billingPeriod": "month", "regionCode": "JP", "taxTreatment": "included", "limits": null, "isPromotional": false, "evidenceIds": ["alpha-pricing"], "checkedAt": "2026-11-01" }
+        ],
+        "evidenceIds": ["alpha-pricing"],
+        "checkedAt": "2026-11-01"
+      },
+      "strengthClaims": [
+        { "claim": { "ja": "日本語での長文要約を得意とする（提供元の説明・架空）" }, "claimType": "provider_claim", "scope": null, "evidenceIds": ["alpha-about"], "checkedAt": "2026-11-01" }
+      ],
+      "evidence": [
+        { "id": "alpha-about", "url": "https://alpha.example.invalid/about", "title": "会社概要（架空）", "sourceType": "official_product_page", "checkedAt": "2026-11-01", "publishedAt": null, "locale": "ja", "note": "提供元の拠点と製品説明" },
+        { "id": "alpha-apps", "url": "https://alpha.example.invalid/download", "title": "ダウンロード（架空）", "sourceType": "official_product_page", "checkedAt": "2026-11-01", "publishedAt": null, "locale": "ja", "note": "対応プラットフォーム" },
+        { "id": "alpha-help", "url": "https://alpha.example.invalid/help/features", "title": "機能ヘルプ（架空）", "sourceType": "official_help", "checkedAt": "2026-11-01", "publishedAt": null, "locale": "ja", "note": "機能と対応言語" },
+        { "id": "alpha-pricing", "url": "https://alpha.example.invalid/pricing", "title": "料金（架空）", "sourceType": "official_pricing", "checkedAt": "2026-11-01", "publishedAt": null, "locale": "ja", "note": "日本向けプランと価格" },
+        { "id": "alpha-regions", "url": "https://alpha.example.invalid/help/regions", "title": "提供地域（架空）", "sourceType": "official_availability", "checkedAt": "2026-11-01", "publishedAt": null, "locale": "ja", "note": "提供国一覧" }
+      ],
+      "lifecycle": { "status": "active", "evidenceIds": ["alpha-about"], "checkedAt": "2026-11-01" }
+    },
+    {
+      "id": "sample-beta-search",
+      "name": "サンプル・ベータ検索",
+      "aliases": [],
+      "provider": {
+        "name": "架空プロバイダーB",
+        "originCountryCode": "US",
+        "evidenceIds": ["beta-home"],
+        "checkedAt": "2026-10-20"
+      },
+      "officialUrl": "https://beta.example.invalid/",
+      "description": { "ja": "UI確認用の架空サービス。Web検索を中心にした調査アシスタントという設定です。" },
+      "inclusionReason": null,
+      "categories": ["search_assistant"],
+      "platforms": { "values": ["web"], "evidenceIds": ["beta-home"], "checkedAt": "2026-10-20" },
+      "languages": {
+        "interface": { "values": ["en"], "evidenceIds": ["beta-home"], "checkedAt": "2026-10-20" },
+        "conversation": { "values": [], "evidenceIds": [], "checkedAt": null }
+      },
+      "availability": [
+        { "regionCode": "JP", "status": "unknown", "conditions": null, "evidenceIds": [], "checkedAt": null },
+        { "regionCode": "US", "status": "supported", "conditions": null, "evidenceIds": ["beta-home"], "checkedAt": "2026-10-20" }
+      ],
+      "capabilities": [
+        { "id": "text_chat", "status": "supported", "delivery": "in_product", "scope": { "regions": [], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": ["beta-home"], "checkedAt": "2026-10-20" },
+        { "id": "web_search", "status": "supported", "delivery": "in_product", "scope": { "regions": [], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": ["beta-home"], "checkedAt": "2026-10-20" },
+        { "id": "file_analysis", "status": "conditional", "delivery": "in_product", "scope": { "regions": [], "plans": ["Pro"], "platforms": [], "languages": [] }, "conditions": { "ja": "Proプランのみ（架空の条件）" }, "evidenceIds": ["beta-pricing"], "checkedAt": "2026-10-20" }
+      ],
+      "pricing": {
+        "offers": [
+          { "planName": "Basic", "access": "freemium", "amount": null, "currency": null, "billingPeriod": null, "regionCode": "US", "taxTreatment": "unknown", "limits": null, "isPromotional": false, "evidenceIds": ["beta-pricing"], "checkedAt": "2026-10-20" },
+          { "planName": "Pro", "access": "paid", "amount": 20, "currency": "USD", "billingPeriod": "month", "regionCode": "US", "taxTreatment": "excluded", "limits": null, "isPromotional": false, "evidenceIds": ["beta-pricing"], "checkedAt": "2026-10-20" }
+        ],
+        "evidenceIds": ["beta-pricing"],
+        "checkedAt": "2026-10-20"
+      },
+      "strengthClaims": [],
+      "evidence": [
+        { "id": "beta-home", "url": "https://beta.example.invalid/", "title": "Home (fictional)", "sourceType": "official_product_page", "checkedAt": "2026-10-20", "publishedAt": null, "locale": "en", "note": "製品説明、提供元、対応機能" },
+        { "id": "beta-pricing", "url": "https://beta.example.invalid/pricing", "title": "Pricing (fictional)", "sourceType": "official_pricing", "checkedAt": "2026-10-20", "publishedAt": null, "locale": "en", "note": "米国向けプランと価格" }
+      ],
+      "lifecycle": { "status": "active", "evidenceIds": ["beta-home"], "checkedAt": "2026-10-20" }
+    },
+    {
+      "id": "sample-gamma-hub",
+      "name": "サンプル・ガンマハブ",
+      "aliases": ["Gamma Hub"],
+      "provider": {
+        "name": "架空プロバイダーC",
+        "originCountryCode": "FR",
+        "evidenceIds": ["gamma-about"],
+        "checkedAt": "2026-06-01"
+      },
+      "officialUrl": "https://gamma.example.invalid/",
+      "description": { "ja": "UI確認用の架空サービス。複数のモデルを切り替えて使える設定です。確認日が古い例として使います。" },
+      "inclusionReason": null,
+      "categories": ["multi_model", "general_assistant"],
+      "platforms": { "values": ["web", "windows", "macos"], "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" },
+      "languages": {
+        "interface": { "values": ["fr", "en", "ja"], "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" },
+        "conversation": { "values": ["fr", "en", "ja"], "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" }
+      },
+      "availability": [
+        { "regionCode": "JP", "status": "conditional", "conditions": { "ja": "招待制の段階提供（架空の条件）" }, "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" }
+      ],
+      "capabilities": [
+        { "id": "text_chat", "status": "supported", "delivery": "in_product", "scope": { "regions": [], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" },
+        { "id": "image_generation", "status": "supported", "delivery": "in_product", "scope": { "regions": [], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" },
+        { "id": "voice_conversation", "status": "supported", "delivery": "separate_product", "scope": { "regions": [], "plans": [], "platforms": ["ios"], "languages": [] }, "conditions": { "ja": "別アプリ「ガンマボイス」で提供（架空）" }, "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" },
+        { "id": "code_generation", "status": "supported", "delivery": "in_product", "scope": { "regions": [], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" }
+      ],
+      "pricing": { "offers": [], "evidenceIds": [], "checkedAt": null },
+      "strengthClaims": [],
+      "evidence": [
+        { "id": "gamma-about", "url": "https://gamma.example.invalid/about", "title": "À propos (fictif)", "sourceType": "official_product_page", "checkedAt": "2026-06-01", "publishedAt": null, "locale": "fr", "note": "製品説明と対応環境" }
+      ],
+      "lifecycle": { "status": "beta", "evidenceIds": ["gamma-about"], "checkedAt": "2026-06-01" }
+    },
+    {
+      "id": "sample-delta-unknown",
+      "name": "サンプル・デルタ",
+      "aliases": [],
+      "provider": { "name": "架空プロバイダーD", "originCountryCode": null, "evidenceIds": [], "checkedAt": null },
+      "officialUrl": "https://delta.example.invalid/",
+      "description": { "ja": "UI確認用の架空サービス。ほとんどの情報が未確認 (unknown) の例です。" },
+      "inclusionReason": null,
+      "categories": ["character_companion"],
+      "platforms": { "values": [], "evidenceIds": [], "checkedAt": null },
+      "languages": {
+        "interface": { "values": [], "evidenceIds": [], "checkedAt": null },
+        "conversation": { "values": [], "evidenceIds": [], "checkedAt": null }
+      },
+      "availability": [
+        { "regionCode": "JP", "status": "unknown", "conditions": null, "evidenceIds": [], "checkedAt": null }
+      ],
+      "capabilities": [
+        { "id": "text_chat", "status": "unknown", "delivery": "unknown", "scope": { "regions": [], "plans": [], "platforms": [], "languages": [] }, "conditions": null, "evidenceIds": [], "checkedAt": null }
+      ],
+      "pricing": { "offers": [], "evidenceIds": [], "checkedAt": null },
+      "strengthClaims": [],
+      "evidence": [],
+      "lifecycle": { "status": "unknown", "evidenceIds": [], "checkedAt": null }
+    }
+  ]
+}

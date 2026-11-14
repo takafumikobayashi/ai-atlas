@@ -1,0 +1,17 @@
+{
+  "name": "ai-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "世界の対話型AIサービスを、できることや利用条件から探せる図鑑サイト",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/validate.mjs && node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "test": "node --test test/"
+  }
+}

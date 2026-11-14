@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Atlas | 世界のAIを、見つける・知る・比べる</title>
+    <meta
+      name="description"
+      content="世界の対話型AIサービスを、できることや利用条件から探せる図鑑。機能・提供地域・料金を、確認日と公式情報の根拠付きで整理しています。"
+    />
+    <meta name="color-scheme" content="dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+
+    <!-- Screen header in the style of a business-computer terminal: screen ID / title / date -->
+    <header class="screen-head">
+      <a class="screen-head__id" href="#" id="screen-id">ATLAS01<span class="cursor" aria-hidden="true"></span></a>
+      <span class="screen-head__title">対話型AIサービス図鑑</span>
+      <span class="screen-head__date" id="screen-date"></span>
+    </header>
+
+    <div class="page">
+      <main id="main" class="column">
+        <p id="sample-banner" class="sample-banner" role="note" hidden>
+          <span class="green">--sample</span> 画面確認用の架空データを表示しています。実在するサービスの情報ではありません。
+        </p>
+        <p id="load-status" class="load-status" role="alert" hidden></p>
+
+        <div id="list-view">
+          <p class="flourish">.:*:. AI Atlas &mdash; 世界のAIを、見つける・知る・比べる .:*:.</p>
+
+          <section aria-labelledby="intro-title">
+            <h1 id="intro-title" class="h">世界の対話型AIを、できることから探す</h1>
+            <p>
+              AI Atlas は、会話形式で使えるAIサービスの図鑑です。画像生成、音声会話、ファイルの読み込みなど、やりたいことからサービスを探せます。
+            </p>
+            <p>
+              機能や料金は、プラン・地域・端末によって変わります。ここに載せているのは、公式の情報源で確かめた内容と、確かめた日付です。順位付けや性能の評価はしていません。
+            </p>
+          </section>
+
+          <nav class="menu" aria-labelledby="menu-title">
+            <h2 id="menu-title" class="menu__title">メイン・メニュー</h2>
+            <p>次から 1 つを選択してください。</p>
+            <ol class="menu__list">
+              <li><a href="#search-title"><span class="menu__no">1.</span><span class="menu__label">サービスをさがす</span><span class="menu__cmd" aria-hidden="true">SEARCH</span></a></li>
+              <li><a href="#policy"><span class="menu__no">2.</span><span class="menu__label">掲載の方針</span><span class="menu__cmd" aria-hidden="true">POLICY</span></a></li>
+              <li><a href="#legend"><span class="menu__no">3.</span><span class="menu__label">表示の見方</span><span class="menu__cmd" aria-hidden="true">LEGEND</span></a></li>
+              <li><a href="data/services.json"><span class="menu__no">4.</span><span class="menu__label">掲載データ（JSON）</span><span class="menu__cmd" aria-hidden="true">DATA</span></a></li>
+            </ol>
+            <form class="cmdline" id="cmdline">
+              <label for="cmd-input">選択項目またはサービス名</label>
+              <div class="cmdline__row">
+                <span class="cmdline__arrow" aria-hidden="true">===&gt;</span>
+                <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" aria-describedby="cmd-help" />
+              </div>
+              <p id="cmd-help" class="dim">番号（1〜4）を入れて Enter で移動します。それ以外の言葉は、サービス名・提供元として検索します。</p>
+            </form>
+          </nav>
+
+          <section aria-labelledby="search-title" class="search-section" id="search-section" tabindex="-1">
+            <h2 id="search-title" class="h">さがす</h2>
+            <p class="prompt" aria-hidden="true">
+              <span class="green">===&gt;</span> <span id="command">atlas search</span><span class="cursor"></span>
+            </p>
+            <form role="search" class="search">
+              <label for="search" class="field">
+                <span class="field__name">サービス名・提供元</span><span class="field__leader" aria-hidden="true"> . . . . </span>
+              </label>
+              <input id="search" type="search" autocomplete="off" spellcheck="false" />
+            </form>
+            <form id="filters" class="filters" aria-label="絞り込み条件"></form>
+            <p class="dim">同じ項目の中は「いずれか」、項目どうしは「すべて」を満たすサービスを表示します。</p>
+
+            <div class="results-head">
+              <h2 id="results-title" class="visually-hidden">サービス一覧</h2>
+              <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
+              <button id="clear-filters" type="button" class="text-button" disabled>[ 条件をクリア ]</button>
+            </div>
+            <ul id="results" class="entries"></ul>
+            <p class="list-end" id="list-end" aria-hidden="true">終わり</p>
+          </section>
+
+          <section id="policy" aria-labelledby="policy-title" tabindex="-1">
+            <h2 id="policy-title" class="h">掲載の方針</h2>
+            <ul class="bullets">
+              <li>会話形式で使える、一般向けのAIサービスを載せています。APIだけのモデルや、開発者向けの道具は対象外です。</li>
+              <li>機能・料金・提供地域は、公式の製品ページ、ヘルプ、料金ページなどで確かめ、出典と確認日を残しています。</li>
+              <li>確かめられなかったことは「未確認」と書きます。「使えない」とは書きません。</li>
+              <li>「対応している」ことと「得意である」ことは分けて扱います。</li>
+              <li>提供元の拠点の国と、サービスを使える国は別のものとして書きます。</li>
+              <li>掲載サービスの提供元とは提携していません。広告や順位付けもしていません。</li>
+            </ul>
+          </section>
+
+          <section id="legend" aria-labelledby="legend-title" tabindex="-1">
+            <h2 id="legend-title" class="h">表示の見方</h2>
+            <div id="legend-table"></div>
+            <p class="dim">「要再確認」は、確認日から90日以上たち、今は変わっている可能性がある情報です。</p>
+          </section>
+        </div>
+
+        <div id="detail-view" class="detail" hidden></div>
+
+        <footer class="site-footer">
+          <p class="flourish">.:*:.</p>
+          <p>
+            機能・料金・提供地域は変わることがあります。使う前に、各公式サイトで最新の情報を確かめてください。
+          </p>
+        </footer>
+      </main>
+
+      <aside class="art" aria-hidden="true">
+        <div class="art__inner">
+          <pre id="globe" class="globe"></pre>
+          <p class="callout">@ は掲載サービスの<br />提供元がある国</p>
+          <div class="wire"></div>
+          <p class="callout">確かめられないことは<br />未確認のまま載せる</p>
+          <div class="wire"></div>
+          <p class="callout">出典と確認日を<br />すべての情報に</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Function-key line. Each key is a real shortcut (see bindShortcuts in app.js). -->
+    <nav class="fkeys" aria-label="キー操作">
+      <button type="button" data-key="/"><kbd>/</kbd>=検索</button>
+      <button type="button" data-key="Escape"><kbd>Esc</kbd>=一覧に戻る</button>
+      <button type="button" data-key="c"><kbd>C</kbd>=条件をクリア</button>
+      <button type="button" data-key="m"><kbd>M</kbd>=メニュー</button>
+    </nav>
+  </body>
+</html>

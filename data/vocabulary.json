@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "staleAfterDays": 90,
+  "statuses": [
+    {
+      "id": "supported",
+      "label": "対応",
+      "symbol": "✓",
+      "description": "対象範囲で利用できることを公式情報で確認済み"
+    },
+    {
+      "id": "conditional",
+      "label": "条件付き",
+      "symbol": "△",
+      "description": "プラン・地域・端末・段階公開などの条件を満たす場合に利用可能"
+    },
+    {
+      "id": "unsupported",
+      "label": "非対応",
+      "symbol": "✕",
+      "description": "対象範囲で利用できないことを公式情報で確認済み"
+    },
+    {
+      "id": "unknown",
+      "label": "未確認",
+      "symbol": "?",
+      "description": "根拠を確認できていない状態。非対応という意味ではありません"
+    }
+  ],
+  "capabilities": [
+    { "id": "text_chat", "label": "テキストチャット", "description": "文章でAIと対話する" },
+    { "id": "web_search", "label": "Web検索・調査", "description": "Web情報を検索し、回答や調査に使う" },
+    { "id": "image_generation", "label": "画像生成", "description": "指示から画像を生成する" },
+    { "id": "video_generation", "label": "動画生成", "description": "指示等から動画を生成する" },
+    { "id": "voice_conversation", "label": "音声会話", "description": "音声で双方向に会話する" },
+    { "id": "file_analysis", "label": "ファイル読込・解析", "description": "PDFや文書などを読み込み質問・要約する" },
+    { "id": "data_analysis", "label": "データ分析", "description": "CSV、表計算等を分析する" },
+    { "id": "code_generation", "label": "コード作成支援", "description": "コードを生成・説明・修正する" },
+    { "id": "agent_tasks", "label": "エージェント・作業実行", "description": "複数ステップの作業を進める" },
+    { "id": "document_creation", "label": "資料・文書作成", "description": "レポートやスライドなどを作る" }
+  ],
+  "categories": [
+    { "id": "general_assistant", "label": "汎用アシスタント" },
+    { "id": "search_assistant", "label": "検索・調査" },
+    { "id": "multi_model", "label": "複数モデル" },
+    { "id": "character_companion", "label": "キャラクター・対話相手" },
+    { "id": "document_research", "label": "資料ベースの調査" }
+  ],
+  "platforms": [
+    { "id": "web", "label": "Web" },
+    { "id": "ios", "label": "iOS" },
+    { "id": "android", "label": "Android" },
+    { "id": "windows", "label": "Windows" },
+    { "id": "macos", "label": "macOS" },
+    { "id": "linux", "label": "Linux" }
+  ],
+  "deliveries": [
+    { "id": "in_product", "label": "サービス内で利用" },
+    { "id": "separate_product", "label": "別の製品・アプリ" },
+    { "id": "integration", "label": "外部連携が必要" },
+    { "id": "api_only", "label": "APIのみ" },
+    { "id": "unknown", "label": "提供形態未確認" }
+  ],
+  "sourceTypes": [
+    { "id": "official_product_page", "label": "公式製品ページ" },
+    { "id": "official_help", "label": "公式ヘルプ" },
+    { "id": "official_pricing", "label": "公式料金ページ" },
+    { "id": "official_availability", "label": "公式提供地域ページ" },
+    { "id": "official_release_note", "label": "公式リリースノート" },
+    { "id": "official_app_listing", "label": "公式アプリストア掲載" },
+    { "id": "other_primary", "label": "その他の一次情報" }
+  ],
+  "pricingAccess": [
+    { "id": "free", "label": "無料" },
+    { "id": "freemium", "label": "無料枠あり" },
+    { "id": "trial", "label": "試用期間" },
+    { "id": "paid", "label": "有料" },
+    { "id": "unknown", "label": "未確認" }
+  ],
+  "billingPeriods": [
+    { "id": "month", "label": "月額" },
+    { "id": "year", "label": "年額" },
+    { "id": "one_time", "label": "買い切り" },
+    { "id": "usage", "label": "従量" }
+  ],
+  "taxTreatments": [
+    { "id": "included", "label": "税込" },
+    { "id": "excluded", "label": "税別" },
+    { "id": "unknown", "label": "税の扱い未確認" }
+  ],
+  "lifecycleStatuses": [
+    { "id": "active", "label": "提供中" },
+    { "id": "beta", "label": "ベータ・段階提供" },
+    { "id": "discontinued", "label": "提供終了" },
+    { "id": "unknown", "label": "提供状況未確認" }
+  ],
+  "strengthClaimTypes": [
+    { "id": "provider_claim", "label": "提供元の主張" },
+    { "id": "editorial_observation", "label": "編集部の所見" }
+  ]
+}
