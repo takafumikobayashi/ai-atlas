@@ -16,17 +16,23 @@
     <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    <!-- Open Graph / link previews. og:image must be absolute: `SITE_URL=https://… npm run build` rewrites it. -->
+    <!-- Open Graph / link previews. URLs must be absolute (X and others ignore relative og:image).
+         To publish on another domain, build with SITE_URL=https://… to rewrite them. -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="AI Atlas" />
     <meta property="og:title" content="AI Atlas | 対話型AIサービス図鑑" />
     <meta property="og:description" content="世界の対話型AIサービスを、できることや利用条件から探せる図鑑。機能・提供地域・料金を、確認日と公式情報の根拠付きで整理しています。" />
-    <meta property="og:image" content="og-image.png" />
+    <meta property="og:url" content="https://ai-atlas.tariki-code.tokyo/" />
+    <meta property="og:image" content="https://ai-atlas.tariki-code.tokyo/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="AI Atlas 対話型AIサービス図鑑。世界のAIを、見つける・知る・比べる。" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Atlas | 対話型AIサービス図鑑" />
+    <meta name="twitter:description" content="世界の対話型AIサービスを、できることや利用条件から探せる図鑑。" />
+    <meta name="twitter:image" content="https://ai-atlas.tariki-code.tokyo/og-image.png" />
+    <meta name="twitter:image:alt" content="AI Atlas 対話型AIサービス図鑑。世界のAIを、見つける・知る・比べる。" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=swap" />

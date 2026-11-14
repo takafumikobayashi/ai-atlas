@@ -17,15 +17,24 @@ await mkdir(path('dist/data'), { recursive: true });
 for (const file of ['services.json', 'vocabulary.json']) {
   await cp(path(`data/${file}`), path(`dist/data/${file}`));
 }
-// Link previews need absolute URLs. Set SITE_URL (e.g. https://example.org) when building for release.
+// Link previews need absolute URLs. site/index.html (and robots.txt / sitemap.xml) carry the
+// production origin; SITE_URL rewrites it when publishing somewhere else.
+const PROD_ORIGIN = 'https://ai-atlas.tariki-code.tokyo';
 const siteUrl = process.env.SITE_URL?.replace(/\/+$/, '');
-if (siteUrl) {
-  const indexPath = path('dist/index.html');
-  const html = (await readFile(indexPath, 'utf8'))
-    .replace('<meta property="og:image" content="og-image.png" />', `<meta property="og:image" content="${siteUrl}/og-image.png" />\n    <meta property="og:url" content="${siteUrl}/" />`);
-  await writeFile(indexPath, html);
-  console.log(`OGP の URL を ${siteUrl} で設定しました`);
-} else {
-  console.log('注意: SITE_URL が未設定のため、og:image は相対パスのままです（公開前に設定してください）');
+if (siteUrl && siteUrl !== PROD_ORIGIN) {
+  for (const file of ['index.html', 'robots.txt', 'sitemap.xml']) {
+    const filePath = path(`dist/${file}`);
+    await writeFile(filePath, (await readFile(filePath, 'utf8')).replaceAll(PROD_ORIGIN, siteUrl));
+  }
+  console.log(`公開先の URL を ${siteUrl} に置き換えました`);
+}
+// Guard: never ship a page whose preview image URL is relative (X shows no / a small card).
+const builtHtml = await readFile(path('dist/index.html'), 'utf8');
+for (const key of ['og:image', 'og:url', 'twitter:image']) {
+  const m = builtHtml.match(new RegExp(`(?:property|name)="${key}" content="([^"]*)"`));
+  if (!m || !/^https:\/\//.test(m[1])) {
+    console.error(`エラー: ${key} が https:// で始まる絶対 URL ではありません（${m ? m[1] : '未設定'}）`);
+    process.exit(1);
+  }
 }
 console.log('dist/ を作成しました（data/fixtures は含みません）');
