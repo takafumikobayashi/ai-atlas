@@ -1,0 +1,200 @@
+<!doctype html>
+<!--
+  Source for the site's Open Graph image (site/og-image.png, 1200x630).
+  Rendered by `npm run og` (scripts/build-og.mjs) with headless Chrome. Not included in dist/.
+  Keep every word accurate to the live site: no features that do not exist, no fixed dates or counts.
+-->
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200" />
+    <title>AI Atlas OGP card</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=block" />
+    <style>
+      :root {
+        --bg: #0c0c0c;
+        --text: #d2d2d2;
+        --bright: #f4f4f4;
+        --muted: #8a8a8a;
+        --green: #4dff7c;
+        --green-dim: #2b8f48;
+        --rule: #4f7fd9;
+        --glow: 0 0 10px rgba(77, 255, 124, 0.45);
+        --font: "BIZ UDGothic", ui-monospace, monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font);
+        -webkit-font-smoothing: antialiased;
+      }
+      .frame {
+        position: absolute;
+        inset: 18px;
+        border: 2px solid var(--green-dim);
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+      .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 22px;
+        font-size: 22px;
+      }
+      .bar--top {
+        border-bottom: 1px dashed var(--rule);
+      }
+      .bar--bottom {
+        border-top: 1px dashed var(--rule);
+        font-size: 20px;
+        color: var(--muted);
+      }
+      .bar .green {
+        color: var(--green);
+        text-shadow: var(--glow);
+      }
+      .main {
+        display: grid;
+        grid-template-columns: 640px minmax(0, 1fr);
+        align-items: center;
+        padding: 0 22px 0 40px;
+      }
+      .title {
+        margin: 0;
+        font-size: 112px;
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        color: var(--bright);
+      }
+      .subtitle {
+        margin: 14px 0 20px;
+        font-size: 44px;
+        font-weight: 700;
+        color: var(--bright);
+      }
+      .tagline {
+        display: inline-block;
+        margin: 0 0 30px;
+        padding: 6px 16px;
+        background: var(--green);
+        color: #0c0c0c;
+        font-size: 30px;
+        font-weight: 700;
+        box-shadow: var(--glow);
+      }
+      .prompt {
+        margin: 0 0 18px;
+        font-size: 24px;
+        color: var(--bright);
+      }
+      .prompt .green,
+      .chips .ok {
+        color: var(--green);
+        text-shadow: var(--glow);
+      }
+      .prompt .arg {
+        color: #ffb547;
+      }
+      .cursor {
+        display: inline-block;
+        width: 0.55em;
+        height: 1.05em;
+        margin-left: 0.25em;
+        vertical-align: -0.15em;
+        background: var(--green);
+        box-shadow: var(--glow);
+      }
+      .chips {
+        margin: 0;
+        font-size: 22px;
+        color: var(--bright);
+        white-space: nowrap;
+      }
+      .chips span + span {
+        margin-left: 0.4em;
+      }
+      .art {
+        min-width: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .globe {
+        margin: 0;
+        font-family: var(--font);
+        font-size: 15px;
+        line-height: 1.05;
+        color: #b4b4b4;
+        white-space: pre;
+      }
+      .globe .g-dim {
+        color: #4a4a4a;
+      }
+      .globe .g-eq {
+        color: var(--green-dim);
+      }
+      .globe .g-mark,
+      .globe .g-mark-off {
+        color: var(--green);
+        text-shadow: var(--glow);
+      }
+      .legend {
+        margin: 12px 0 0;
+        padding: 4px 12px;
+        border: 1px solid var(--bright);
+        color: var(--bright);
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="bar bar--top">
+        <span><span class="green">■</span> AI Atlas &mdash; 対話型AIサービス図鑑</span>
+        <span>ATLAS01</span>
+      </div>
+      <div class="main">
+        <div>
+          <h1 class="title">AI Atlas</h1>
+          <p class="subtitle">対話型AIサービス図鑑</p>
+          <p class="tagline">世界のAIを、見つける・知る・比べる。</p>
+          <p class="prompt"><span class="green">===&gt;</span> atlas search <span class="green">--can</span> <span class="arg">画像生成</span><span class="cursor"></span></p>
+          <p class="chips">
+            <span><span class="ok">[✓ 画像生成]</span></span>
+            <span><span class="ok">[✓ 動画生成]</span></span>
+            <span><span class="ok">[✓ 音声会話]</span></span>
+            <span><span class="ok">[✓ ファイル解析]</span></span>
+          </p>
+        </div>
+        <div class="art">
+          <pre id="globe" class="globe" aria-hidden="true"></pre>
+          <p class="legend">@ = 掲載サービスの提供元がある国</p>
+        </div>
+      </div>
+      <div class="bar bar--bottom">
+        <span>&gt; 世界の対話型AIサービスを、できることと利用条件から探せる図鑑</span>
+        <span>出典と確認日つき</span>
+      </div>
+    </div>
+    <script type="module">
+      import { mountGlobe } from './js/globe.js';
+      // Show only the countries that actually appear in the published catalogue.
+      const catalog = await fetch('data/services.json').then((r) => r.json());
+      const origins = [...new Set(catalog.services.map((s) => s.provider?.originCountryCode).filter(Boolean))];
+      await document.fonts.ready;
+      mountGlobe(document.getElementById('globe'), { origins, angleDeg: 80, still: true });
+      document.body.dataset.ready = '1';
+    </script>
+  </body>
+</html>

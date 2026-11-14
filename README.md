@@ -14,8 +14,11 @@ Node.js 20 以上が必要です。依存パッケージはないため、`npm i
 npm run dev        # 開発サーバー http://localhost:4173/（?sample で架空のサンプルデータを表示）
 npm run validate   # 掲載データの検証（構造・語彙・根拠・確認日）
 npm test           # 絞り込みロジックと検証ルールのテスト
-npm run build      # 検証後、公開用の静的ファイルを dist/ に出力
+npm run build      # 検証後、公開用の静的ファイルを dist/ に出力（公開時は SITE_URL=https://… を指定）
 npm run preview    # dist/ をローカルで確認
+npm run og         # サイトの OGP 画像（site/og-image.png）を作り直す（Chrome が必要）
+npm run review     # 照合シート（reports/review.html）を作る
+npm run previews   # 各サービスの公式 OGP 画像を確認する（--write で記録）
 ```
 
 ## 構成
