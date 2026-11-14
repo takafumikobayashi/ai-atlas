@@ -10,8 +10,8 @@ const path = (p) => fileURLToPath(new URL(p, root));
 await rm(path('dist'), { recursive: true, force: true });
 await cp(path('site'), path('dist'), {
   recursive: true,
-  // og-card.html is only the source for og-image.png
-  filter: (src) => !src.endsWith('og-card.html'),
+  // og-card.html and its script are only the source for og-image.png
+  filter: (src) => !/og-card\.(html|js)$/.test(src),
 });
 await mkdir(path('dist/data'), { recursive: true });
 for (const file of ['services.json', 'vocabulary.json']) {

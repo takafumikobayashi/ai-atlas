@@ -29,6 +29,16 @@ if (!chrome) {
 const server = spawn(process.execPath, ['scripts/serve.mjs', '--port', String(PORT)], { cwd: root, stdio: 'ignore' });
 try {
   await waitFor(`http://localhost:${PORT}/og-card.html`);
+  // Render once and check the card finished (globe drawn) before overwriting the image.
+  // A CSP or script error would otherwise still "succeed" with an incomplete card.
+  const { stdout: dom } = await run(
+    chrome,
+    ['--headless=new', '--disable-gpu', '--virtual-time-budget=8000', '--dump-dom', `http://localhost:${PORT}/og-card.html`],
+    { maxBuffer: 10 * 1024 * 1024 },
+  );
+  if (!/<body[^>]*data-ready="1"/.test(dom) || !dom.includes('g-mark')) {
+    throw new Error('OGP カードの描画が完了しませんでした（地球儀が描かれていません）。site/og-image.png は更新していません。CSP やスクリプトのエラーを確認してください。');
+  }
   await run(chrome, [
     '--headless=new',
     '--disable-gpu',

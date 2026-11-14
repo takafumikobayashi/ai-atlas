@@ -86,7 +86,7 @@
 
 ### D10. サイトの OGP 画像とファビコン（2026-11-14）
 
-- **OGP 画像：** `site/og-card.html` をサイトと同じ HTML・CSS で作り、`npm run og`（`scripts/build-og.mjs`）でヘッドレス Chrome により `site/og-image.png`（1200×630）にする。画像の中の文言は実際のサイトに合わせ、存在しない機能や、古くなる日付・件数は入れない。地球儀の `@` は公開データにある提供元の国から描く。`og-card.html` は公開ビルドに含めない。
+- **OGP 画像：** `site/og-card.html` をサイトと同じ HTML・CSS で作り、`npm run og`（`scripts/build-og.mjs`）でヘッドレス Chrome により `site/og-image.png`（1200×630）にする。画像の中の文言は実際のサイトに合わせ、存在しない機能や、古くなる日付・件数は入れない。地球儀の `@` は公開データにある提供元の国から描く。初期化処理は CSP（`script-src 'self'`）の下でも動くよう外部モジュール `site/js/og-card.js` に置き、`og-card.html` とともに公開ビルドに含めない。`build-og.mjs` は描画の完了（`data-ready` と地球儀の印）を確かめてから撮影し、完了していなければ既存の画像を上書きせずにエラーで止まる。
 - **OGP の URL：** `og:image` は絶対 URL が必要なため、`SITE_URL=https://… npm run build` で絶対 URL と `og:url` に置き換える。公開ドメインが決まるまでは相対パスのまま。
 - **ファビコン：** ブラウザのタブ（16px）では細部がつぶれるため、16×16 のマス目で描いた地球儀の SVG（`site/favicon.svg`）を使う。32px の PNG とホーム画面用アイコン（180px）には、提案された窓と地球儀のドット絵を縮小して使う。
 
