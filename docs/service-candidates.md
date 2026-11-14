@@ -43,6 +43,23 @@
 - Alice AI
 - PLaMo
 
+## 調査状況（2026-11-14）
+
+候補27件のうち25件を `data/services.json` に登録した。登録済みでも「未確認」の項目が残っているものがある（照合シート `npm run review` で確認できる）。
+
+| 候補 | 状況 | 備考 |
+|---|---|---|
+| ChatGPT / Claude / Gemini | 登録済み | |
+| Microsoft Copilot / Grok / Meta AI / Perplexity / DeepSeek / Qwen | 登録済み | |
+| Vibe | 登録済み（Mistral Vibe） | 旧称 Le Chat。名称変更を公式ページで確認 |
+| Dola / Doubao / Kimi / Z.ai / Tencent Yuanbao | 登録済み | Doubao は日本から開くと地域制限の案内が表示される |
+| ERNIE／文心 | 登録済み（百度文心助手） | yiyan.baidu.com は百度文心助手に転送される |
+| Poe / Duck.ai / Pi / Character.AI / Genspark | 登録済み | Character.AI は2026年10月に Chapter 11 を開始、サービスは継続と発表 |
+| NotebookLM | 登録済み（Gemini Notebook） | 名称変更を公式ページで確認 |
+| Felo AI / GigaChat / Alice AI | 登録済み（Felo / GigaChat / Alice AI） | |
+| You.com | **保留** | 公式ページは法人向けAPIが中心で、個人向けの会話型サービスを確認できなかった（プライバシーポリシーに有料プランの名称のみ記載） |
+| PLaMo | **保留** | 個人向けは翻訳サービス「PLaMo翻訳」（会話型ではない）と、ログインが必要なチャットのデモのみを確認。一般向けの会話型サービスとしての提供を確認できなかった |
+
 ## 候補の採否を決める前に確認すること
 
 1. 現在も一般ユーザー向けに提供されているか。終了・統合・名称変更・ベータ移行がないか。

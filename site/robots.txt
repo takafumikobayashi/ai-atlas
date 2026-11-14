@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-atlas.tariki-code.tokyo/sitemap.xml

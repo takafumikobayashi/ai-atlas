@@ -38,7 +38,12 @@ function measureAspect(pre) {
 const TILT = (20 * Math.PI) / 180; // look down slightly so mid-northern latitudes face the viewer
 const DEG = 180 / Math.PI;
 
-export function mountGlobe(pre, { origins = [] } = {}) {
+/**
+ * @param {HTMLElement} pre
+ * @param {{ origins?: string[], angleDeg?: number, still?: boolean }} [options]
+ *   angleDeg: longitude that faces the viewer at start (default 138 = Japan); still: never animate.
+ */
+export function mountGlobe(pre, { origins = [], angleDeg = 138, still = false } = {}) {
   const markers = origins
     .filter((code) => CENTROIDS[code])
     .map((code) => {
@@ -53,8 +58,7 @@ export function mountGlobe(pre, { origins = [] } = {}) {
     draw();
   });
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  // Start with Japan roughly facing the viewer.
-  let theta = -138 / DEG;
+  let theta = -angleDeg / DEG;
 
   const draw = () => {
     pre.innerHTML = render(theta, markers, highlighted);
@@ -71,7 +75,7 @@ export function mountGlobe(pre, { origins = [] } = {}) {
   };
   const start = () => {
     cancelAnimationFrame(raf);
-    if (!reduced.matches && !document.hidden) raf = requestAnimationFrame(tick);
+    if (!still && !reduced.matches && !document.hidden) raf = requestAnimationFrame(tick);
   };
   reduced.addEventListener?.('change', () => {
     start();

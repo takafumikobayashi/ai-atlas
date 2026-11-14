@@ -34,6 +34,8 @@
 
 html {
   background: var(--bg);
+  /* keep focused or scrolled-to items clear of the fixed function-key line */
+  scroll-padding-bottom: 64px;
 }
 body {
   margin: 0;
@@ -114,8 +116,12 @@ button {
   position: absolute !important;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   white-space: nowrap;
 }
 .skip-link {
@@ -182,6 +188,8 @@ button {
   display: grid;
   grid-template-columns: minmax(0, var(--col)) 1fr;
   gap: 56px;
+  /* Left-aligned like a terminal screen; capped so very wide displays do not drift apart. */
+  max-width: 2000px;
   padding: 72px 36px 0;
 }
 .column {
@@ -428,6 +436,37 @@ nav:focus {
   color: var(--muted);
 }
 
+/* Collapsible advanced filters -------------------------------------------------- */
+
+.more-filters {
+  margin: 0 0 1em;
+}
+.more-filters__summary {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--bright);
+  list-style: none;
+}
+.more-filters__summary::-webkit-details-marker {
+  display: none;
+}
+.more-filters__mark::before {
+  content: "[+] ";
+  color: var(--green);
+}
+.more-filters[open] .more-filters__mark::before {
+  content: "[-] ";
+}
+.more-filters__summary:hover .more-filters__mark::before {
+  color: var(--bright);
+}
+.more-filters__count {
+  color: var(--amber);
+}
+.more-filters__body {
+  margin-top: 1em;
+}
+
 /* Results --------------------------------------------------------------------------- */
 
 .results-head {
@@ -532,6 +571,16 @@ nav:focus {
   flex-wrap: wrap;
   gap: 0 1.5ch;
 }
+.entry .caps {
+  margin: 0 0 0.7em;
+}
+.caps__more {
+  color: var(--muted);
+}
+.entry__free {
+  margin-right: 2ch;
+  color: var(--text);
+}
 .entry__foot {
   display: flex;
   flex-wrap: wrap;
@@ -579,7 +628,7 @@ nav:focus {
 }
 .preview figcaption {
   margin-top: 4px;
-  color: var(--dim);
+  color: var(--muted);
   font-size: 13px;
   line-height: 1.4;
   overflow-wrap: anywhere;
@@ -597,6 +646,13 @@ nav:focus {
   content: "";
   display: block;
   clear: both;
+}
+
+/* Flag emoji: rendered by the system emoji font next to the monospace text */
+.flag-emoji {
+  margin-right: 0.35em;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  text-shadow: none;
 }
 
 /* Status: [✓ 対応] — symbol and words, never colour alone ---------------------------- */
@@ -747,11 +803,15 @@ nav:focus {
   align-items: center;
   width: max-content;
   max-width: 100%;
+  /* The right column is the "map area": centre the globe in it. */
+  margin-inline: auto;
 }
 .globe {
   margin: 0 0 12px;
   font-family: var(--font);
-  font-size: 13px;
+  /* Grows with the viewport (13px at ~1400px wide, 18px from ~1900px). The globe stays round
+     because globe.js measures the cell aspect ratio. */
+  font-size: clamp(13px, calc(1vw - 1px), 18px);
   line-height: 1;
   color: #9a9a9a;
   white-space: pre;
@@ -866,6 +926,9 @@ nav:focus {
   }
   body {
     padding-bottom: 0;
+  }
+  html {
+    scroll-padding-bottom: 0;
   }
 }
 

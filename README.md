@@ -1,6 +1,6 @@
 # AI Atlas
 
-世界の対話型AIサービスを、できることや利用条件から探せる図鑑サイトのプロジェクトです。
+世界の対話型AIサービスを、できることや利用条件から探せる図鑑サイトのプロジェクトです。公開先は https://ai-atlas.tariki-code.tokyo/ （準備中）です。
 
 **コンセプト:** 世界のAIを、見つける・知る・比べる。
 
@@ -14,8 +14,12 @@ Node.js 20 以上が必要です。依存パッケージはないため、`npm i
 npm run dev        # 開発サーバー http://localhost:4173/（?sample で架空のサンプルデータを表示）
 npm run validate   # 掲載データの検証（構造・語彙・根拠・確認日）
 npm test           # 絞り込みロジックと検証ルールのテスト
-npm run build      # 検証後、公開用の静的ファイルを dist/ に出力
+npm run build      # 検証後、公開用の静的ファイルを dist/ に出力（公開時は SITE_URL=https://… を指定）
+npm run build:prod # 本番用ビルド（https://ai-atlas.tariki-code.tokyo 向け）
 npm run preview    # dist/ をローカルで確認
+npm run og         # サイトの OGP 画像（site/og-image.png）を作り直す（Chrome が必要）
+npm run review     # 照合シート（reports/review.html）を作る
+npm run previews   # 各サービスの公式 OGP 画像を確認する（--write で記録）
 ```
 
 ## 構成
@@ -36,6 +40,7 @@ npm run preview    # dist/ をローカルで確認
 - [データ設計・検証ルール](docs/data-schema.md)
 - [データ更新手順](docs/data-workflow.md)
 - [決定事項・保留事項](docs/decisions.md)
+- [公開手順（Cloudflare Pages）](docs/deploy.md)
 - [候補サービス（未検証）](docs/service-candidates.md)
 - [実装フェーズ・検証計画](docs/implementation-plan.md)
 
