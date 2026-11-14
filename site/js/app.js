@@ -109,6 +109,18 @@ function safeDisplayNames(type) {
   }
 }
 
+/** Flag emoji from an ISO 3166-1 alpha-2 code (regional indicator symbols). */
+function flagEmoji(code) {
+  if (!/^[A-Z]{2}$/.test(code ?? '')) return '';
+  return String.fromCodePoint(...[...code].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
+}
+
+/** Country name with its flag. The flag is decorative, so screen readers hear only the name. */
+function regionLabel(code) {
+  const flag = flagEmoji(code);
+  return [flag ? h('span', { class: 'flag-emoji', 'aria-hidden': 'true' }, flag) : null, regionName(code)];
+}
+
 function regionName(code) {
   return (code && regionNames?.of(code)) || code;
 }
@@ -301,7 +313,7 @@ function renderFilters() {
           legend: '提供元の拠点',
           flag: '--origin',
           name: 'origins',
-          items: options.origins.map((code) => ({ value: code, text: regionName(code) })),
+          items: options.origins.map((code) => ({ value: code, text: regionLabel(code) })),
           note: '企業の拠点です。その国・地域で使えるという意味ではありません。',
         })
       : null,
@@ -464,7 +476,13 @@ function renderEntry(service) {
         h('span', { class: 'entry__id', 'aria-hidden': 'true' }, service.id.toUpperCase()),
       ),
       previewFigure(service, 'thumb'),
-      h('p', { class: 'entry__provider' }, `${service.provider?.name}${origin ? `（拠点: ${regionName(origin)}）` : ''} / ${label('lifecycleStatuses', service.lifecycle?.status ?? 'unknown')}`),
+      h(
+        'p',
+        { class: 'entry__provider' },
+        service.provider?.name,
+        origin ? ['（拠点: ', regionLabel(origin), '）'] : '',
+        ` / ${label('lifecycleStatuses', service.lifecycle?.status ?? 'unknown')}`,
+      ),
       h('p', { class: 'entry__desc' }, service.description?.ja),
       h(
         'dl',
@@ -681,7 +699,7 @@ function renderDetail(service) {
       '概要',
       h('p', {}, service.description?.ja),
       kvBlock([
-        ['提供元', `${service.provider?.name}（拠点: ${origin ? regionName(origin) : '未確認'}）`, service.provider],
+        ['提供元', [service.provider?.name, '（拠点: ', origin ? regionLabel(origin) : '未確認', '）'], service.provider],
         ['公式サイト', externalLink(service.officialUrl, new URL(service.officialUrl).hostname)],
         ['分類', (service.categories ?? []).map((c) => label('categories', c)).join('、')],
         ['提供状況', label('lifecycleStatuses', service.lifecycle?.status ?? 'unknown'), service.lifecycle],
@@ -700,7 +718,7 @@ function renderDetail(service) {
             'ul',
             { class: 'bullets' },
             service.availability.map((a) =>
-              h('li', { class: 'claim-line' }, statusBadge(a.status, { text: regionName(a.regionCode) }), a.conditions?.ja ? h('span', { class: 'detail-text' }, a.conditions.ja) : null, meta(a)),
+              h('li', { class: 'claim-line' }, statusBadge(a.status, { text: regionLabel(a.regionCode) }), a.conditions?.ja ? h('span', { class: 'detail-text' }, a.conditions.ja) : null, meta(a)),
             ),
           )
         : null,

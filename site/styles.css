@@ -599,6 +599,13 @@ nav:focus {
   clear: both;
 }
 
+/* Flag emoji: rendered by the system emoji font next to the monospace text */
+.flag-emoji {
+  margin-right: 0.35em;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  text-shadow: none;
+}
+
 /* Status: [✓ 対応] — symbol and words, never colour alone ---------------------------- */
 
 .status {
