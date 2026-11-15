@@ -5842,6 +5842,475 @@
         "alt": null,
         "checkedAt": "2026-11-14"
       }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "日本の会社が独自に開発したモデルで提供する、一般向けの対話型AIサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "sakana-chat",
+      "name": "Sakana Chat",
+      "provider": {
+        "name": "Sakana AI（Sakana AI 株式会社）",
+        "originCountryCode": "JP",
+        "evidenceIds": [
+          "sakana-company"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://chat.sakana.ai/",
+      "description": {
+        "ja": "東京の Sakana AI が提供する対話型AIサービス。日々の調べものやアイデアの壁打ちに使え、同社のモデル（Namazu・Fugu）を選んで会話できます。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "sakana-chat-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料で試せると案内されています。"
+          },
+          "evidenceIds": [
+            "sakana-chat-home",
+            "sakana-chat-update"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "画像の添付はすべてのモデルで使え、PDF や Office のファイルも読み込めると記載されています。"
+          },
+          "evidenceIds": [
+            "sakana-chat-update"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "「無料で試せる」と案内されています。利用量の上限などは未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "sakana-chat-update"
+            ],
+            "checkedAt": "2026-11-15"
+          }
+        ],
+        "evidenceIds": [
+          "sakana-chat-update"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "evidence": [
+        {
+          "id": "sakana-chat-home",
+          "url": "https://chat.sakana.ai/",
+          "title": "Sakana Chat",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web のチャット画面。モデル（Namazu）の選択とサインインの案内。"
+        },
+        {
+          "id": "sakana-chat-update",
+          "url": "https://sakana.ai/chat-update/",
+          "title": "Sakana Chatがアップデート：「Sakana Fugu」と新世代「Sakana Namazu」が利用可能に",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-15",
+          "publishedAt": "2026-08-13",
+          "locale": "ja",
+          "note": "モデルの選択、Python の実行、画像・PDF・Office ファイルの読み込み。無料で試せると案内（2026年8月13日）。"
+        },
+        {
+          "id": "sakana-company",
+          "url": "https://sakana.ai/company-info/",
+          "title": "Corporate Info — Sakana AI",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "会社名 Sakana AI K.K.（Sakana AI 株式会社）、所在地は東京都港区麻布台（JAPAN）。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "sakana-chat-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://chat.sakana.ai/sakana/thumbnail.png",
+        "sourceUrl": "https://chat.sakana.ai/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [
+        "LINE AI",
+        "Yahoo! JAPAN AIアシスタント",
+        "エージェント アイ"
+      ],
+      "inclusionReason": {
+        "ja": "LINE と Yahoo! JAPAN から使える、日本で身近な対話型AIサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "agent-i",
+      "name": "Agent i",
+      "provider": {
+        "name": "LINEヤフー（LINEヤフー株式会社）",
+        "originCountryCode": "JP",
+        "evidenceIds": [
+          "ly-company"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://events.yahoo.co.jp/agent-i/",
+      "description": {
+        "ja": "LINEヤフーが提供するAIエージェント。LINE や Yahoo! JAPAN のアプリからそのまま呼び出せ、買い物やおでかけ、悩みの相談などに使えます（旧「LINE AI」「AIアシスタント」を統合）。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "agent-i-site",
+          "agent-i-app"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ja"
+          ],
+          "evidenceIds": [
+            "agent-i-site"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "13歳未満は利用を控えるよう案内されています。Yahoo! JAPAN から自由入力するには Yahoo! JAPAN ID でのログインが必要です。"
+          },
+          "evidenceIds": [
+            "agent-i-site",
+            "agent-i-launch"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "登録したキーワードの最新情報や値下がりを継続して届ける機能や、分野ごとのエージェント（β版を含む）があると記載されています。"
+          },
+          "evidenceIds": [
+            "agent-i-app"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "agent-i-site",
+          "url": "https://events.yahoo.co.jp/agent-i/",
+          "title": "Agent i（アイ） - LINEとヤフーのかんたんAI | LINEヤフー",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "Yahoo! JAPAN アプリ（iOS・Android）、LINE アプリ、スマートフォン・タブレット・PC のブラウザーで利用可能。13歳未満は利用を控えるよう案内。"
+        },
+        {
+          "id": "agent-i-launch",
+          "url": "https://www.lycorp.co.jp/ja/news/release/020366/",
+          "title": "LINEヤフー、AIエージェントの新ブランド「Agent i」を本日スタート",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-15",
+          "publishedAt": "2026-04-20",
+          "locale": "ja",
+          "note": "Yahoo! JAPAN の「AIアシスタント」と LINE の「LINE AI」を統合した新ブランドとして提供開始（2026年4月20日）。"
+        },
+        {
+          "id": "agent-i-app",
+          "url": "https://www.lycorp.co.jp/ja/news/release/020972/",
+          "title": "LINEヤフー、AIエージェント「Agent i」のアプリを提供開始",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-15",
+          "publishedAt": "2026-11-10",
+          "locale": "ja",
+          "note": "iOS 版アプリの提供開始（Android 版は順次提供予定）。継続的な情報の通知や分野ごとのエージェントの紹介（2026年11月10日）。"
+        },
+        {
+          "id": "ly-company",
+          "url": "https://www.lycorp.co.jp/ja/company/overview/",
+          "title": "会社概要｜LINEヤフー株式会社",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "LINEヤフー株式会社の本社所在地は東京都千代田区紀尾井町。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "agent-i-site"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://s.yimg.jp/images/evt/agent-i/assets/ogp/ogp.png",
+        "sourceUrl": "https://events.yahoo.co.jp/agent-i/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [
+        "コトモ"
+      ],
+      "inclusionReason": {
+        "ja": "日本発の、音声での雑談に特化した会話AIサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "character_companion"
+      ],
+      "id": "cotomo",
+      "name": "Cotomo",
+      "provider": {
+        "name": "Starley（Starley株式会社）",
+        "originCountryCode": "JP",
+        "evidenceIds": [
+          "cotomo-legal"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://cotomo.ai/",
+      "description": {
+        "ja": "Starley が提供する、音声で雑談する会話AIアプリ。性格・口調・記憶などを設定した自分だけの話し相手をつくれ、声優の声も選べます。"
+      },
+      "platforms": {
+        "values": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "evidenceIds": [
+          "cotomo-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ja"
+          ],
+          "evidenceIds": [
+            "cotomo-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "音声で会話するアプリです。声は4種類の標準の声に加え、声優の声（一部有料）を選べます。"
+          },
+          "evidenceIds": [
+            "cotomo-home"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "Cotomoコイン（アプリ内通貨）",
+            "access": "paid",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "価格は購入画面に表示（税込）と記載されています。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "cotomo-legal"
+            ],
+            "checkedAt": "2026-11-15"
+          }
+        ],
+        "evidenceIds": [
+          "cotomo-legal"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "evidence": [
+        {
+          "id": "cotomo-home",
+          "url": "https://cotomo.ai/",
+          "title": "音声会話型おしゃべりAIアプリ  Cotomo(コトモ）",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "App Store・Google Play へのリンクと「Webでおしゃべりする」入口。キャラクターのカスタマイズ、声優の声（一部有料）の案内。"
+        },
+        {
+          "id": "cotomo-legal",
+          "url": "https://starley.notion.site/111a91479a878028b26fea2f55d50c95",
+          "title": "法令に基づく表示",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "特定商取引法に基づく表示。運営事業者 Starley株式会社（東京都港区六本木）。アプリ内通貨「Cotomoコイン」の価格は購入画面に税込で表示。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "cotomo-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://storage.googleapis.com/production-os-assets/assets/57949bb2-7174-4bcb-a06a-c50a1ef5203d",
+        "sourceUrl": "https://cotomo.ai/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
     }
   ]
 }
