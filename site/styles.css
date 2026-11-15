@@ -292,6 +292,28 @@ nav:focus {
 .cmdline .dim {
   margin: 0.3em 0 0;
 }
+.cmdline__msg {
+  margin: 0.6em 0 0;
+  padding: 6px 10px;
+  border: 1px dashed var(--line);
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--bright);
+}
+.cmdline__msg[data-kind="error"] {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.cmdline__msg[data-kind="help"] {
+  color: var(--text);
+  overflow-x: auto;
+  white-space: pre;
+}
+.mono-inline {
+  color: var(--green);
+}
 
 /* Bullets "* " ------------------------------------------------------------------ */
 
