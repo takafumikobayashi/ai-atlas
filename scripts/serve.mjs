@@ -55,7 +55,12 @@ const server = createServer(async (req, res) => {
     });
     res.end(body);
   } catch (error) {
-    send(res, error.code === 'ENOENT' ? 404 : 500, error.code === 'ENOENT' ? 'Not found' : 'Server error');
+    if (error.code !== 'ENOENT') return send(res, 500, 'Server error');
+    // Like Cloudflare Pages: serve 404.html with status 404 when it exists.
+    const page = await readFile(resolve(useDist ? resolve(root, 'dist') : resolve(root, 'site'), '404.html')).catch(() => null);
+    if (!page) return send(res, 404, 'Not found');
+    res.writeHead(404, { ...headersFor('/404.html'), 'Content-Type': TYPES['.html'], 'Cache-Control': 'no-cache' });
+    res.end(page);
   }
 });
 

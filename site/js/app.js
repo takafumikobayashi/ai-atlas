@@ -613,8 +613,9 @@ function bindShortcuts() {
       el.search.focus();
       el.search.select();
     },
-    Escape: () => {
+    Escape: ({ fromButton = false } = {}) => {
       if (!el.detailView.hidden) goTo('#');
+      else if (fromButton) el.count.scrollIntoView({ block: 'start' }); // tapped "一覧": jump to the results
       else if (document.activeElement instanceof HTMLInputElement) document.activeElement.blur();
     },
     c: () => el.clear.click(),
@@ -636,7 +637,7 @@ function bindShortcuts() {
     action();
   });
   document.querySelectorAll('.fkeys button').forEach((button) => {
-    button.addEventListener('click', () => actions[button.dataset.key]?.());
+    button.addEventListener('click', () => actions[button.dataset.key]?.({ fromButton: true }));
   });
 }
 

@@ -70,6 +70,7 @@ npx wrangler pages deploy dist --project-name ai-atlas    # 初回はプロジ�
 - ブラウザの開発者ツールで、コンテンツセキュリティポリシー（CSP）の違反が出ていない。
 - SNS で OGP 画像が大きく表示される（画像の URL は `https://ai-atlas.tariki-code.tokyo/og-image.png`）。X などはリンクの情報をしばらく保存するため、修正直後は古い表示のことがある。`https://ai-atlas.tariki-code.tokyo/?v=2` のように末尾を変えた URL で確かめる。
 - `https://ai-atlas.tariki-code.tokyo/robots.txt` と `/sitemap.xml` が開ける。
+- 存在しない URL（例：`/no-such-page`）で 404 ページが表示され、ステータスが 404 になる（`curl -sI` で確認できる）。
 
 ## 関連ファイル
 
