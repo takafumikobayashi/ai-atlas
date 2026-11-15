@@ -292,6 +292,28 @@ nav:focus {
 .cmdline .dim {
   margin: 0.3em 0 0;
 }
+.cmdline__msg {
+  margin: 0.6em 0 0;
+  padding: 6px 10px;
+  border: 1px dashed var(--line);
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--bright);
+}
+.cmdline__msg[data-kind="error"] {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.cmdline__msg[data-kind="help"] {
+  color: var(--text);
+  overflow-x: auto;
+  white-space: pre;
+}
+.mono-inline {
+  color: var(--green);
+}
 
 /* Bullets "* " ------------------------------------------------------------------ */
 
@@ -789,6 +811,9 @@ nav:focus {
   font: inherit;
   color: var(--bright);
 }
+.fk-touch {
+  display: none;
+}
 
 /* Art column: the ASCII globe and its framed notes -------------------------------- */
 
@@ -920,15 +945,39 @@ nav:focus {
   .field__leader {
     display: none;
   }
-  /* keyboard shortcuts are of little use on touch screens */
+  /* Phones: the function-key line becomes four tap targets (no key names). */
   .fkeys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 0 0 env(safe-area-inset-bottom);
+  }
+  .fkeys button {
+    min-height: 48px;
+    border-right: 1px dashed var(--line);
+  }
+  .fkeys button:last-child {
+    border-right: 0;
+  }
+  .fk-key {
     display: none;
   }
+  .fk-touch {
+    display: inline;
+  }
+  .fk-touch::before {
+    content: "[ ";
+    color: var(--muted);
+  }
+  .fk-touch::after {
+    content: " ]";
+    color: var(--muted);
+  }
   body {
-    padding-bottom: 0;
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
   }
   html {
-    scroll-padding-bottom: 0;
+    scroll-padding-bottom: calc(56px + env(safe-area-inset-bottom));
   }
 }
 
@@ -936,4 +985,19 @@ nav:focus {
   .cursor {
     animation: none;
   }
+}
+
+/* 404 page ------------------------------------------------------------------------------- */
+
+.page--single {
+  grid-template-columns: minmax(0, var(--col));
+}
+.not-found {
+  padding-bottom: 0;
+}
+.not-found__status {
+  color: var(--amber);
+}
+.not-found__arg {
+  color: var(--amber);
 }

@@ -2618,12 +2618,12 @@
       "name": "Grok",
       "provider": {
         "name": "SpaceXSI（SpaceX Super Intelligence LLC）",
-        "originCountryCode": null,
+        "originCountryCode": "US",
         "evidenceIds": [
           "grok-terms",
           "grok-privacy"
         ],
-        "checkedAt": "2026-11-14"
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://grok.com/",
       "description": {
@@ -2908,10 +2908,10 @@
           "url": "https://x.ai/legal/terms-of-service",
           "title": "Terms of Service - Consumer | SpaceXSI",
           "sourceType": "other_primary",
-          "checkedAt": "2026-11-14",
+          "checkedAt": "2026-11-15",
           "publishedAt": null,
           "locale": "en",
-          "note": "Grok は SpaceXSI が開発した対話型AIと記載。13歳以上（13〜17歳は保護者の許可が必要）。紛争は米国テキサス州の裁判所で解決。"
+          "note": "SpaceX Super Intelligence LLC はネバダ州の会社で、主たる事業所は米国テキサス州オースティンと記載。Grok は同社が開発した対話型AI。13歳以上（13〜17歳は保護者の許可が必要）。"
         },
         {
           "id": "grok-privacy",
@@ -3106,10 +3106,13 @@
       "id": "meta-ai",
       "name": "Meta AI",
       "provider": {
-        "name": "Meta",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Meta（Meta Platforms, Inc.）",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "meta-ai-terms",
+          "meta-privacy"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://www.meta.ai/",
       "description": {
@@ -3198,6 +3201,26 @@
           "publishedAt": null,
           "locale": "en",
           "note": "Web の利用画面。画像の生成、写真の編集、買い物の相談の紹介。アプリのダウンロード案内あり。"
+        },
+        {
+          "id": "meta-ai-terms",
+          "url": "https://www.facebook.com/legal/ai-terms",
+          "title": "Meta AI 利用規約",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "Meta AI などのAIの利用規約。利用者と Meta Platforms, Inc. との契約と記載。"
+        },
+        {
+          "id": "meta-privacy",
+          "url": "https://www.facebook.com/privacy/policy/",
+          "title": "Metaプライバシーポリシー",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "問い合わせ先として Meta Platforms, Inc.（米国カリフォルニア州メンロパーク）の住所を記載。"
         }
       ],
       "lifecycle": {
@@ -3489,10 +3512,13 @@
       "id": "kimi",
       "name": "Kimi",
       "provider": {
-        "name": "Moonshot AI",
+        "name": "Moonshot AI（中国本土外: NOVASCENT PRIVATE LIMITED）",
         "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "evidenceIds": [
+          "kimi-privacy-intl",
+          "kimi-privacy-cn"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://www.kimi.com/",
       "description": {
@@ -3602,6 +3628,26 @@
           "publishedAt": null,
           "locale": "en",
           "note": "日本から開いた Web の画面（英語）。スライド・文書・表・調査・エージェント・予定タスクのメニュー。表示言語は英語と簡体字中国語。© 2026 Moonshot AI。"
+        },
+        {
+          "id": "kimi-privacy-intl",
+          "url": "https://www.kimi.ai/user/agreement/userPrivacy?version=v2",
+          "title": "Kimi Privacy Policy（中国本土外の利用者向け）",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "中国本土外の利用者に対する提供者は NOVASCENT PRIVATE LIMITED と記載（2026年11月5日更新）。所在国の記載はない。"
+        },
+        {
+          "id": "kimi-privacy-cn",
+          "url": "https://www.kimi.com/user/agreement/userPrivacy?version=v2",
+          "title": "Kimi Privacy Policy（中国本土の利用者向け）",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "中国本土の利用者向け。提供者は Beijing Moonshot Technology Co., Ltd. で、連絡先は北京市海淀区（2026年11月12日発効）。"
         }
       ],
       "lifecycle": {
@@ -3628,10 +3674,12 @@
       "id": "tencent-yuanbao",
       "name": "Tencent Yuanbao",
       "provider": {
-        "name": "Tencent",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Tencent（深圳市腾讯计算机系统有限公司）",
+        "originCountryCode": "CN",
+        "evidenceIds": [
+          "yuanbao-terms"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://yuanbao.tencent.com/",
       "description": {
@@ -3702,6 +3750,16 @@
           "publishedAt": null,
           "locale": "en",
           "note": "日本から開いた Web のチャット画面。ログイン方法（WeChat・電話番号・QQ）とデスクトップ版のダウンロード案内。"
+        },
+        {
+          "id": "yuanbao-terms",
+          "url": "https://rule.tencent.com/rule/202403110001",
+          "title": "元宝用户服务协议",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "zh-CN",
+          "note": "利用規約（2026年11月5日発効）。運営者は深圳市腾讯计算机系统有限公司、連絡先の住所は深圳市南山区。"
         }
       ],
       "lifecycle": {
@@ -3914,10 +3972,12 @@
       "id": "baidu-wenxin",
       "name": "百度文心助手",
       "provider": {
-        "name": "Baidu",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Baidu（北京百度网讯科技有限公司）",
+        "originCountryCode": "CN",
+        "evidenceIds": [
+          "wenxin-terms"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://wenxin.baidu.com/",
       "description": {
@@ -4040,6 +4100,16 @@
           "publishedAt": null,
           "locale": "zh-CN",
           "note": "yiyan.baidu.com から転送される Web の画面。対話・画像生成・文章作成・PPT 生成・タスクのメニュー。"
+        },
+        {
+          "id": "wenxin-terms",
+          "url": "https://aisearch.cdn.bcebos.com/homepage/privacy/newest-term.html",
+          "title": "百度文心助手使用规则",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "zh-CN",
+          "note": "利用規約（2026年11月5日更新）。契約相手は北京百度网讯科技有限公司。連絡先の住所は北京市海淀区。"
         }
       ],
       "lifecycle": {
@@ -4492,10 +4562,12 @@
       "id": "character-ai",
       "name": "Character.AI",
       "provider": {
-        "name": "Character.AI",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Character.AI（Character Technologies, Inc.）",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "cai-tos"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://character.ai/",
       "description": {
@@ -4637,6 +4709,16 @@
           "publishedAt": "2026-10-12",
           "locale": "en",
           "note": "米国で Chapter 11 の破産手続きを開始し、プラットフォームは引き続き稼働していると発表。"
+        },
+        {
+          "id": "cai-tos",
+          "url": "https://character.ai/tos",
+          "title": "character.ai | AI Chat, Reimagined–Your Words. Your World.",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Terms of Service。通知先として Character Technologies, Inc. の住所（米国カリフォルニア州メンロパーク）を記載。"
         }
       ],
       "lifecycle": {
@@ -4880,10 +4962,12 @@
       "id": "alice-ai",
       "name": "Alice AI",
       "provider": {
-        "name": "Yandex",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Yandex（ООО «Платформа ИИ-решений»）",
+        "originCountryCode": "RU",
+        "evidenceIds": [
+          "alice-terms"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://alice.yandex.ru/",
       "description": {
@@ -5034,6 +5118,16 @@
           "publishedAt": null,
           "locale": "ru",
           "note": "Web の画面（ロシア語）。無料のAIチャットと紹介。文章生成、画像生成、ファイルのアップロード（Pro モード）、予約や価格比較の機能。"
+        },
+        {
+          "id": "alice-terms",
+          "url": "https://yandex.ru/legal/alice_chat/ru",
+          "title": "Условия использования Сервиса «Алиса AI»",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ru",
+          "note": "「Алиса AI」の利用規約（2026年9月10日公開）。提供者は ООО «Платформа ИИ-решений»（ИНН 9705252275）。ООО はロシア法の有限会社、ИНН はロシアの納税者番号。住所の記載はない。"
         }
       ],
       "lifecycle": {
@@ -5267,12 +5361,13 @@
       "id": "poe",
       "name": "Poe",
       "provider": {
-        "name": "Quora",
-        "originCountryCode": null,
+        "name": "Quora（Quora, Inc.）",
+        "originCountryCode": "US",
         "evidenceIds": [
-          "poe-terms"
+          "poe-terms",
+          "quora-privacy"
         ],
-        "checkedAt": "2026-11-14"
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://poe.com/",
       "description": {
@@ -5372,6 +5467,16 @@
           "publishedAt": null,
           "locale": "en",
           "note": "Poe は他社のAIモデルによるボットを使えるプラットフォームで、契約相手は Quora, Inc.。13歳未満は利用不可。"
+        },
+        {
+          "id": "quora-privacy",
+          "url": "https://www.quora.com/about/privacy",
+          "title": "Privacy Policy - Quora",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Quora, Inc. の郵送先として米国カリフォルニア州マウンテンビューの住所を記載。"
         }
       ],
       "lifecycle": {
@@ -5396,14 +5501,16 @@
       "id": "gigachat",
       "name": "GigaChat",
       "provider": {
-        "name": "Sber",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Sber（ПАО Сбербанк）",
+        "originCountryCode": "RU",
+        "evidenceIds": [
+          "giga-agreement"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://giga.chat/",
       "description": {
-        "ja": "ロシアの Sber（ズベルバンク）が提供する、ロシア語を中心とした対話型AIサービス。会話のほか、音声での会話や調べものの機能があります。"
+        "ja": "ロシアの Sber（ズベルバンク）が提供する、ロシア語を中心とした対話型AIサービス。会話のほか、音声での会話や調べものの機能があります。利用規約では、利用者をロシア連邦の居住者に限っています。"
       },
       "platforms": {
         "values": [
@@ -5433,10 +5540,14 @@
       "availability": [
         {
           "regionCode": "JP",
-          "status": "unknown",
-          "conditions": null,
-          "evidenceIds": [],
-          "checkedAt": null
+          "status": "unsupported",
+          "conditions": {
+            "ja": "利用規約で、利用者は18歳以上でロシア連邦の居住者に限ると定められています。"
+          },
+          "evidenceIds": [
+            "giga-agreement"
+          ],
+          "checkedAt": "2026-11-15"
         }
       ],
       "capabilities": [
@@ -5490,6 +5601,16 @@
           "publishedAt": null,
           "locale": "ru",
           "note": "日本から開いた Web の画面（ロシア語）。新しいチャット、プロジェクト、動画、調べもの、音声での会話のメニュー。"
+        },
+        {
+          "id": "giga-agreement",
+          "url": "https://developers.sber.ru/docs/ru/policies/gigachat/agreement",
+          "title": "Правила допустимого использования GigaChat",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ru",
+          "note": "GigaChat の利用規約。利用者は18歳以上でロシア連邦の居住者と定義。ПАО Сбербанк の法的住所はモスクワ（ヴァヴィロフ通り19）。"
         }
       ],
       "lifecycle": {
@@ -5720,6 +5841,1049 @@
         "sourceUrl": "https://felo.ai/ja",
         "alt": null,
         "checkedAt": "2026-11-14"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "日本の会社が独自に開発したモデルで提供する、一般向けの対話型AIサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "sakana-chat",
+      "name": "Sakana Chat",
+      "provider": {
+        "name": "Sakana AI（Sakana AI 株式会社）",
+        "originCountryCode": "JP",
+        "evidenceIds": [
+          "sakana-company"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://chat.sakana.ai/",
+      "description": {
+        "ja": "東京の Sakana AI が提供する対話型AIサービス。日々の調べものやアイデアの壁打ちに使え、同社のモデル（Namazu・Fugu）を選んで会話できます。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "sakana-chat-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料で試せると案内されています。"
+          },
+          "evidenceIds": [
+            "sakana-chat-home",
+            "sakana-chat-update"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "画像の添付はすべてのモデルで使え、PDF や Office のファイルも読み込めると記載されています。"
+          },
+          "evidenceIds": [
+            "sakana-chat-update"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "「無料で試せる」と案内されています。利用量の上限などは未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "sakana-chat-update"
+            ],
+            "checkedAt": "2026-11-15"
+          }
+        ],
+        "evidenceIds": [
+          "sakana-chat-update"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "evidence": [
+        {
+          "id": "sakana-chat-home",
+          "url": "https://chat.sakana.ai/",
+          "title": "Sakana Chat",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web のチャット画面。モデル（Namazu）の選択とサインインの案内。"
+        },
+        {
+          "id": "sakana-chat-update",
+          "url": "https://sakana.ai/chat-update/",
+          "title": "Sakana Chatがアップデート：「Sakana Fugu」と新世代「Sakana Namazu」が利用可能に",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-15",
+          "publishedAt": "2026-08-13",
+          "locale": "ja",
+          "note": "モデルの選択、Python の実行、画像・PDF・Office ファイルの読み込み。無料で試せると案内（2026年8月13日）。"
+        },
+        {
+          "id": "sakana-company",
+          "url": "https://sakana.ai/company-info/",
+          "title": "Corporate Info — Sakana AI",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "会社名 Sakana AI K.K.（Sakana AI 株式会社）、所在地は東京都港区麻布台（JAPAN）。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "sakana-chat-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://chat.sakana.ai/sakana/thumbnail.png",
+        "sourceUrl": "https://chat.sakana.ai/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [
+        "LINE AI",
+        "Yahoo! JAPAN AIアシスタント",
+        "エージェント アイ"
+      ],
+      "inclusionReason": {
+        "ja": "LINE と Yahoo! JAPAN から使える、日本で身近な対話型AIサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "agent-i",
+      "name": "Agent i",
+      "provider": {
+        "name": "LINEヤフー（LINEヤフー株式会社）",
+        "originCountryCode": "JP",
+        "evidenceIds": [
+          "ly-company"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://events.yahoo.co.jp/agent-i/",
+      "description": {
+        "ja": "LINEヤフーが提供するAIエージェント。LINE や Yahoo! JAPAN のアプリからそのまま呼び出せ、買い物やおでかけ、悩みの相談などに使えます（旧「LINE AI」「AIアシスタント」を統合）。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "agent-i-site",
+          "agent-i-app"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ja"
+          ],
+          "evidenceIds": [
+            "agent-i-site"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "13歳未満は利用を控えるよう案内されています。Yahoo! JAPAN から自由入力するには Yahoo! JAPAN ID でのログインが必要です。"
+          },
+          "evidenceIds": [
+            "agent-i-site",
+            "agent-i-launch"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "登録したキーワードの最新情報や値下がりを継続して届ける機能や、分野ごとのエージェント（β版を含む）があると記載されています。"
+          },
+          "evidenceIds": [
+            "agent-i-app"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "agent-i-site",
+          "url": "https://events.yahoo.co.jp/agent-i/",
+          "title": "Agent i（アイ） - LINEとヤフーのかんたんAI | LINEヤフー",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "Yahoo! JAPAN アプリ（iOS・Android）、LINE アプリ、スマートフォン・タブレット・PC のブラウザーで利用可能。13歳未満は利用を控えるよう案内。"
+        },
+        {
+          "id": "agent-i-launch",
+          "url": "https://www.lycorp.co.jp/ja/news/release/020366/",
+          "title": "LINEヤフー、AIエージェントの新ブランド「Agent i」を本日スタート",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-15",
+          "publishedAt": "2026-04-20",
+          "locale": "ja",
+          "note": "Yahoo! JAPAN の「AIアシスタント」と LINE の「LINE AI」を統合した新ブランドとして提供開始（2026年4月20日）。"
+        },
+        {
+          "id": "agent-i-app",
+          "url": "https://www.lycorp.co.jp/ja/news/release/020972/",
+          "title": "LINEヤフー、AIエージェント「Agent i」のアプリを提供開始",
+          "sourceType": "official_release_note",
+          "checkedAt": "2026-11-15",
+          "publishedAt": "2026-11-10",
+          "locale": "ja",
+          "note": "iOS 版アプリの提供開始（Android 版は順次提供予定）。継続的な情報の通知や分野ごとのエージェントの紹介（2026年11月10日）。"
+        },
+        {
+          "id": "ly-company",
+          "url": "https://www.lycorp.co.jp/ja/company/overview/",
+          "title": "会社概要｜LINEヤフー株式会社",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "LINEヤフー株式会社の本社所在地は東京都千代田区紀尾井町。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "agent-i-site"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://s.yimg.jp/images/evt/agent-i/assets/ogp/ogp.png",
+        "sourceUrl": "https://events.yahoo.co.jp/agent-i/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [
+        "コトモ"
+      ],
+      "inclusionReason": {
+        "ja": "日本発の、音声での雑談に特化した会話AIサービスのため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "character_companion"
+      ],
+      "id": "cotomo",
+      "name": "Cotomo",
+      "provider": {
+        "name": "Starley（Starley株式会社）",
+        "originCountryCode": "JP",
+        "evidenceIds": [
+          "cotomo-legal"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://cotomo.ai/",
+      "description": {
+        "ja": "Starley が提供する、音声で雑談する会話AIアプリ。性格・口調・記憶などを設定した自分だけの話し相手をつくれ、声優の声も選べます。"
+      },
+      "platforms": {
+        "values": [
+          "ios",
+          "android",
+          "web"
+        ],
+        "evidenceIds": [
+          "cotomo-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [
+            "ja"
+          ],
+          "evidenceIds": [
+            "cotomo-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "voice_conversation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "音声で会話するアプリです。声は4種類の標準の声に加え、声優の声（一部有料）を選べます。"
+          },
+          "evidenceIds": [
+            "cotomo-home"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "Cotomoコイン（アプリ内通貨）",
+            "access": "paid",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "価格は購入画面に表示（税込）と記載されています。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "cotomo-legal"
+            ],
+            "checkedAt": "2026-11-15"
+          }
+        ],
+        "evidenceIds": [
+          "cotomo-legal"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "evidence": [
+        {
+          "id": "cotomo-home",
+          "url": "https://cotomo.ai/",
+          "title": "音声会話型おしゃべりAIアプリ  Cotomo(コトモ）",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "App Store・Google Play へのリンクと「Webでおしゃべりする」入口。キャラクターのカスタマイズ、声優の声（一部有料）の案内。"
+        },
+        {
+          "id": "cotomo-legal",
+          "url": "https://starley.notion.site/111a91479a878028b26fea2f55d50c95",
+          "title": "法令に基づく表示",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "特定商取引法に基づく表示。運営事業者 Starley株式会社（東京都港区六本木）。アプリ内通貨「Cotomoコイン」の価格は購入画面に税込で表示。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "cotomo-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://storage.googleapis.com/production-os-assets/assets/57949bb2-7174-4bcb-a06a-c50a1ef5203d",
+        "sourceUrl": "https://cotomo.ai/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "オープンソースのAIモデルを選んで会話できる、一般向けのチャットの代表例のため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "multi_model"
+      ],
+      "id": "huggingchat",
+      "name": "HuggingChat",
+      "provider": {
+        "name": "Hugging Face（Hugging Face, Inc.）",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "hf-terms",
+          "hf-privacy"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://huggingface.co/chat",
+      "description": {
+        "ja": "AIモデルの共有サイト Hugging Face が提供する、オープンソースのAIモデルで会話できるチャット。多数のモデルから選ぶか、自動で選ばせて使えます。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "hf-chat"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "オープンソースのAIモデルを選んで会話できます（自動でモデルを選ぶ「Omni」もあり）。"
+          },
+          "evidenceIds": [
+            "hf-chat"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "hf-chat",
+          "url": "https://huggingface.co/chat",
+          "title": "HuggingChat - Chat with AI models",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "オープンソースのAIモデルで動くチャット。モデルの選択と、自動で選ぶ Omni の紹介。"
+        },
+        {
+          "id": "hf-terms",
+          "url": "https://huggingface.co/terms-of-service",
+          "title": "Terms of Service – Hugging Face",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "提供者は Hugging Face, Inc.（デラウェア州の会社）。"
+        },
+        {
+          "id": "hf-privacy",
+          "url": "https://huggingface.co/privacy",
+          "title": "Privacy Policy – Hugging Face",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "会社とサーバーは米国にあると記載。EU の拠点は Hugging Face, SAS（パリ）。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "hf-chat"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://huggingface.co/chat/huggingchat/thumbnail.png",
+        "sourceUrl": "https://huggingface.co/chat/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "ブラウザ拡張などから複数のAIモデルを手軽に使えるアシスタントで、日本語のページもあるため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "multi_model",
+        "general_assistant"
+      ],
+      "id": "monica",
+      "name": "Monica",
+      "provider": {
+        "name": "Butterfly Effect Pte. Ltd.",
+        "originCountryCode": "SG",
+        "evidenceIds": [
+          "monica-home",
+          "manus-terms-shared"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://monica.im/",
+      "description": {
+        "ja": "複数の会社のAIモデルを1つで使えるAIアシスタント。Web・ブラウザ拡張・デスクトップ・スマートフォンで使え、Web検索、画像の生成、PDFの読み込み、翻訳などに対応しています。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "windows",
+          "macos",
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "monica-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料で使い始められ、無料版は1日の利用量に上限があります。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "web_search",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "Web の最新情報を使って回答すると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "画像を生成できると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "PDF と会話する機能（ChatPDF）があると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "自動化した作業手順をもつアシスタントを作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "無料で使い始められ、1日の利用量に上限があります。有料版の価格は未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "monica-home"
+            ],
+            "checkedAt": "2026-11-15"
+          }
+        ],
+        "evidenceIds": [
+          "monica-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "evidence": [
+        {
+          "id": "monica-home",
+          "url": "https://monica.im/",
+          "title": "Monica - All-in-One AI Assistant for Chat, Writing & Research",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web・ブラウザ拡張・デスクトップ（Windows・Mac）・モバイル（Android・iOS）で利用可能。複数モデル、Web検索、画像生成、PDF、翻訳、ボット作成の紹介。無料版は1日の上限あり。© 2026 BUTTERFLY EFFECT PTE. LTD."
+        },
+        {
+          "id": "manus-terms-shared",
+          "url": "https://manus.im/terms",
+          "title": "Terms - Manus",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Manus の利用規約。契約相手は Butterfly Effect Pte. Ltd.、準拠法はシンガポール法（Monica のサイトの著作権表示と同じ会社名）。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "monica-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://assets.monica.im/home-web/_next/static/media/home.8dacd426.jpg",
+        "sourceUrl": "https://monica.im/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "会話よりも作業の実行に重点を置いた「AIエージェント」型のサービスの代表例で、日本語のページもあるため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "manus",
+      "name": "Manus",
+      "provider": {
+        "name": "Butterfly Effect Pte. Ltd.",
+        "originCountryCode": "SG",
+        "evidenceIds": [
+          "manus-terms"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://manus.im/",
+      "description": {
+        "ja": "作業をこなすことに重点を置いた汎用のAIエージェント。調べもの、スライドやWebアプリの作成、画像や動画の生成などを任せられます。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "windows",
+          "macos",
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "manus-download"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "依頼を文章で伝えて使います。"
+          },
+          "evidenceIds": [
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "複数の調べものを並行して進めたり、ブラウザを操作したりできると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download",
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "web_search",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "大規模な並行リサーチ（Wide Research）ができると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "document_creation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "アイデアからスライドを作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "code_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "ログインやデータベースを備えた Web アプリを作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "文章から画像を生成できると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "video_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "アイデアから動画を作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "manus-download",
+          "url": "https://manus.im/download",
+          "title": "Download Manus",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "macOS・Windows・iOS・Android 向けアプリ。スライド、Web アプリ、画像の作成などの紹介。"
+        },
+        {
+          "id": "manus-features",
+          "url": "https://manus.im/features",
+          "title": "Manus Features",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "並行リサーチ、ブラウザ操作、動画の作成などの機能紹介。日本語版のページあり。"
+        },
+        {
+          "id": "manus-terms",
+          "url": "https://manus.im/terms",
+          "title": "Terms - Manus",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "利用規約（2026年9月28日更新）。契約相手は Butterfly Effect Pte. Ltd.、準拠法はシンガポール法。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "manus-download"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://files.manuscdn.com/webapp/media/ogBanner.png",
+        "sourceUrl": "https://manus.im/pricing",
+        "alt": null,
+        "checkedAt": "2026-11-15"
       }
     }
   ]

@@ -1,0 +1,54 @@
+<!doctype html>
+<!--
+  Not-found page. Cloudflare Pages serves this with status 404 for any unknown path
+  (and scripts/serve.mjs does the same locally). Paths are root-absolute because this page
+  can be shown at any depth, e.g. /a/b/c.
+-->
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>ページが見つかりません | AI Atlas</title>
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0c0c0c" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="not-found">
+    <header class="screen-head">
+      <a class="screen-head__id" href="/">ATLAS-404<span class="cursor" aria-hidden="true"></span></a>
+      <span class="screen-head__title">対話型AIサービス図鑑</span>
+      <span class="screen-head__date" aria-hidden="true">ERROR</span>
+    </header>
+
+    <main class="page page--single" id="main">
+      <div class="column">
+        <p class="prompt" aria-hidden="true"><span class="green">===&gt;</span> atlas show <span class="not-found__arg">（指定されたページ）</span></p>
+        <h1 class="h">ページが見つかりません</h1>
+        <p class="not-found__status">エラー: 指定されたページは存在しないか、移動しました。（HTTP 404）</p>
+        <p>URL に誤りがないか確かめるか、次のメニューから選んでください。</p>
+
+        <nav class="menu" aria-labelledby="nf-menu-title">
+          <h2 id="nf-menu-title" class="menu__title">メイン・メニュー</h2>
+          <p>次から 1 つを選択してください。</p>
+          <ol class="menu__list">
+            <li><a href="/"><span class="menu__no">1.</span><span class="menu__label">トップページへ戻る</span><span class="menu__cmd" aria-hidden="true">TOP</span></a></li>
+            <li><a href="/#search-title"><span class="menu__no">2.</span><span class="menu__label">サービスをさがす</span><span class="menu__cmd" aria-hidden="true">SEARCH</span></a></li>
+            <li><a href="/#policy"><span class="menu__no">3.</span><span class="menu__label">掲載の方針</span><span class="menu__cmd" aria-hidden="true">POLICY</span></a></li>
+          </ol>
+        </nav>
+
+        <footer class="site-footer">
+          <p class="flourish">.:*:.</p>
+          <p>AI Atlas &mdash; 世界のAIを、見つける・知る・比べる。</p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>

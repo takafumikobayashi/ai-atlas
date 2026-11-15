@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>AI Atlas | 世界のAIを、見つける・知る・比べる</title>
     <meta
       name="description"
@@ -81,7 +81,8 @@
                 <span class="cmdline__arrow" aria-hidden="true">===&gt;</span>
                 <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" aria-describedby="cmd-help" />
               </div>
-              <p id="cmd-help" class="dim">番号（1〜4）を入れて Enter で移動します。それ以外の言葉は、サービス名・提供元として検索します。</p>
+              <p id="cmd-help" class="dim">番号（1〜4）で移動、言葉でサービス名・提供元を検索します。<span class="mono-inline">--can 画像生成 --free</span> のような指定や <span class="mono-inline">show claude</span> もできます。<span class="mono-inline">help</span> で使い方を表示します。</p>
+              <pre id="cmd-msg" class="cmdline__msg" role="status" aria-live="polite" hidden></pre>
             </form>
           </nav>
 
@@ -150,11 +151,12 @@
     </div>
 
     <!-- Function-key line. Each key is a real shortcut (see bindShortcuts in app.js). -->
-    <nav class="fkeys" aria-label="キー操作">
-      <button type="button" data-key="/"><kbd>/</kbd>=検索</button>
-      <button type="button" data-key="Escape"><kbd>Esc</kbd>=一覧に戻る</button>
-      <button type="button" data-key="c"><kbd>C</kbd>=条件をクリア</button>
-      <button type="button" data-key="m"><kbd>M</kbd>=メニュー</button>
+    <!-- Keyboard: "/=検索" style labels. Touch screens: the same buttons as plain tap targets. -->
+    <nav class="fkeys" aria-label="操作">
+      <button type="button" data-key="/"><span class="fk-key"><kbd>/</kbd>=検索</span><span class="fk-touch">検索</span></button>
+      <button type="button" data-key="Escape"><span class="fk-key"><kbd>Esc</kbd>=一覧に戻る</span><span class="fk-touch">一覧</span></button>
+      <button type="button" data-key="c"><span class="fk-key"><kbd>C</kbd>=条件をクリア</span><span class="fk-touch">クリア</span></button>
+      <button type="button" data-key="m"><span class="fk-key"><kbd>M</kbd>=メニュー</span><span class="fk-touch">メニュー</span></button>
     </nav>
   </body>
 </html>

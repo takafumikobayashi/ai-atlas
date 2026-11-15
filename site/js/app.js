@@ -12,6 +12,7 @@ import {
   sortServices,
 } from './filter.js';
 import { mountGlobe } from './globe.js';
+import { HELP_TEXT, parseCommand } from './command.js';
 
 const params = new URLSearchParams(location.search);
 const USE_SAMPLE = params.has('sample');
@@ -47,6 +48,7 @@ const el = {
   screenDate: document.getElementById('screen-date'),
   cmdline: document.getElementById('cmdline'),
   cmdInput: document.getElementById('cmd-input'),
+  cmdMsg: document.getElementById('cmd-msg'),
   listEnd: document.getElementById('list-end'),
   menu: document.querySelector('.menu'),
 };
@@ -577,24 +579,92 @@ function setScreenId(id) {
 
 const MENU_TARGETS = { 1: '#search-title', 2: '#policy', 3: '#legend', 4: 'data/services.json' };
 
-/** "選択項目またはサービス名 ===>": a number opens a menu item, anything else searches by name. */
+/**
+ * Main-menu command line. Accepts menu numbers, plain words (name search) and the same
+ * flags the decorative "===> atlas search …" line shows (see command.js).
+ */
 function bindCommandLine() {
   el.cmdline.addEventListener('submit', (event) => {
     event.preventDefault();
-    const value = el.cmdInput.value.normalize('NFKC').trim();
-    if (!value) return;
-    el.cmdInput.value = '';
-    if (MENU_TARGETS[value]) {
-      const target = MENU_TARGETS[value];
-      if (target.startsWith('#')) goTo(target);
-      else location.href = target;
-      return;
+    const raw = el.cmdInput.value;
+    const result = parseCommand(raw, commandContext());
+    switch (result.type) {
+      case 'empty':
+        return;
+      case 'menu': {
+        const target = MENU_TARGETS[result.item];
+        clearCommand();
+        if (target.startsWith('#')) goTo(target);
+        else location.href = target;
+        return;
+      }
+      case 'help':
+        return showCommandMessage(HELP_TEXT, 'help');
+      case 'clear':
+        clearCommand();
+        el.clear.click();
+        return showCommandMessage('条件をクリアしました。');
+      case 'show':
+        clearCommand();
+        location.hash = `#/service/${result.id}`;
+        return;
+      case 'error':
+        // keep the input so it can be corrected
+        return showCommandMessage(`エラー: ${result.errors.join(' ')}`, 'error');
+      case 'search': {
+        clearCommand();
+        applyCriteria(result.criteria);
+        const n = filterServices(state.services, state.criteria).length;
+        showCommandMessage(`${n}件が該当しました。`);
+        goTo('#search-title');
+        return;
+      }
     }
-    el.search.value = value;
-    updateResults();
-    goTo('#search-title');
-    el.search.focus({ preventScroll: true });
   });
+}
+
+function commandContext() {
+  const options = deriveOptions(state.services);
+  return {
+    capabilities: state.vocab.raw.capabilities,
+    platforms: state.vocab.raw.platforms,
+    origins: options.origins,
+    languages: options.languages,
+    services: state.services,
+    regionName,
+    languageName,
+  };
+}
+
+/** Sets the search box and filter controls to match the criteria, then re-renders. */
+function applyCriteria(c) {
+  el.search.value = c.query;
+  const setGroup = (name, values) => {
+    for (const input of el.filters.querySelectorAll(`input[name="${name}"]`)) input.checked = values.includes(input.value);
+  };
+  setGroup('capabilities', c.capabilities);
+  setGroup('origins', c.origins);
+  setGroup('languages', c.languages);
+  setGroup('platforms', c.platforms);
+  setGroup('freeOnly', c.freeOnly ? ['1'] : []);
+  const mode = el.filters.querySelector(`input[name="capabilityMode"][value="${c.capabilityMode}"]`);
+  if (mode) mode.checked = true;
+  // reveal the advanced group when the command used it, so nothing is filtered invisibly
+  if (c.origins.length || c.languages.length || c.platforms.length || c.freeOnly) {
+    el.filters.querySelector('.more-filters')?.setAttribute('open', '');
+  }
+  updateResults();
+}
+
+function clearCommand() {
+  el.cmdInput.value = '';
+  showCommandMessage('');
+}
+
+function showCommandMessage(text, kind = 'info') {
+  el.cmdMsg.textContent = text;
+  el.cmdMsg.dataset.kind = kind;
+  el.cmdMsg.hidden = !text;
 }
 
 function goTo(hash) {
@@ -613,8 +683,9 @@ function bindShortcuts() {
       el.search.focus();
       el.search.select();
     },
-    Escape: () => {
+    Escape: ({ fromButton = false } = {}) => {
       if (!el.detailView.hidden) goTo('#');
+      else if (fromButton) el.count.scrollIntoView({ block: 'start' }); // tapped "一覧": jump to the results
       else if (document.activeElement instanceof HTMLInputElement) document.activeElement.blur();
     },
     c: () => el.clear.click(),
@@ -636,7 +707,7 @@ function bindShortcuts() {
     action();
   });
   document.querySelectorAll('.fkeys button').forEach((button) => {
-    button.addEventListener('click', () => actions[button.dataset.key]?.());
+    button.addEventListener('click', () => actions[button.dataset.key]?.({ fromButton: true }));
   });
 }
 
