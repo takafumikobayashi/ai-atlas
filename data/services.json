@@ -6311,6 +6311,580 @@
         "alt": null,
         "checkedAt": "2026-11-15"
       }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "オープンソースのAIモデルを選んで会話できる、一般向けのチャットの代表例のため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "multi_model"
+      ],
+      "id": "huggingchat",
+      "name": "HuggingChat",
+      "provider": {
+        "name": "Hugging Face（Hugging Face, Inc.）",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "hf-terms",
+          "hf-privacy"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://huggingface.co/chat",
+      "description": {
+        "ja": "AIモデルの共有サイト Hugging Face が提供する、オープンソースのAIモデルで会話できるチャット。多数のモデルから選ぶか、自動で選ばせて使えます。"
+      },
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "hf-chat"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "オープンソースのAIモデルを選んで会話できます（自動でモデルを選ぶ「Omni」もあり）。"
+          },
+          "evidenceIds": [
+            "hf-chat"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "hf-chat",
+          "url": "https://huggingface.co/chat",
+          "title": "HuggingChat - Chat with AI models",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "オープンソースのAIモデルで動くチャット。モデルの選択と、自動で選ぶ Omni の紹介。"
+        },
+        {
+          "id": "hf-terms",
+          "url": "https://huggingface.co/terms-of-service",
+          "title": "Terms of Service – Hugging Face",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "提供者は Hugging Face, Inc.（デラウェア州の会社）。"
+        },
+        {
+          "id": "hf-privacy",
+          "url": "https://huggingface.co/privacy",
+          "title": "Privacy Policy – Hugging Face",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "会社とサーバーは米国にあると記載。EU の拠点は Hugging Face, SAS（パリ）。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "hf-chat"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://huggingface.co/chat/huggingchat/thumbnail.png",
+        "sourceUrl": "https://huggingface.co/chat/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "ブラウザ拡張などから複数のAIモデルを手軽に使えるアシスタントで、日本語のページもあるため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "multi_model",
+        "general_assistant"
+      ],
+      "id": "monica",
+      "name": "Monica",
+      "provider": {
+        "name": "Butterfly Effect Pte. Ltd.",
+        "originCountryCode": "SG",
+        "evidenceIds": [
+          "monica-home",
+          "manus-terms-shared"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://monica.im/",
+      "description": {
+        "ja": "複数の会社のAIモデルを1つで使えるAIアシスタント。Web・ブラウザ拡張・デスクトップ・スマートフォンで使え、Web検索、画像の生成、PDFの読み込み、翻訳などに対応しています。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "windows",
+          "macos",
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "monica-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料で使い始められ、無料版は1日の利用量に上限があります。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "web_search",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "Web の最新情報を使って回答すると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "画像を生成できると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "file_analysis",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "PDF と会話する機能（ChatPDF）があると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "自動化した作業手順をもつアシスタントを作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "monica-home"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "無料",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "無料で使い始められ、1日の利用量に上限があります。有料版の価格は未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "monica-home"
+            ],
+            "checkedAt": "2026-11-15"
+          }
+        ],
+        "evidenceIds": [
+          "monica-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "evidence": [
+        {
+          "id": "monica-home",
+          "url": "https://monica.im/",
+          "title": "Monica - All-in-One AI Assistant for Chat, Writing & Research",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Web・ブラウザ拡張・デスクトップ（Windows・Mac）・モバイル（Android・iOS）で利用可能。複数モデル、Web検索、画像生成、PDF、翻訳、ボット作成の紹介。無料版は1日の上限あり。© 2026 BUTTERFLY EFFECT PTE. LTD."
+        },
+        {
+          "id": "manus-terms-shared",
+          "url": "https://manus.im/terms",
+          "title": "Terms - Manus",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Manus の利用規約。契約相手は Butterfly Effect Pte. Ltd.、準拠法はシンガポール法（Monica のサイトの著作権表示と同じ会社名）。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "monica-home"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://assets.monica.im/home-web/_next/static/media/home.8dacd426.jpg",
+        "sourceUrl": "https://monica.im/",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
+    },
+    {
+      "aliases": [],
+      "inclusionReason": {
+        "ja": "会話よりも作業の実行に重点を置いた「AIエージェント」型のサービスの代表例で、日本語のページもあるため。"
+      },
+      "strengthClaims": [],
+      "categories": [
+        "general_assistant"
+      ],
+      "id": "manus",
+      "name": "Manus",
+      "provider": {
+        "name": "Butterfly Effect Pte. Ltd.",
+        "originCountryCode": "SG",
+        "evidenceIds": [
+          "manus-terms"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialUrl": "https://manus.im/",
+      "description": {
+        "ja": "作業をこなすことに重点を置いた汎用のAIエージェント。調べもの、スライドやWebアプリの作成、画像や動画の生成などを任せられます。"
+      },
+      "platforms": {
+        "values": [
+          "web",
+          "windows",
+          "macos",
+          "ios",
+          "android"
+        ],
+        "evidenceIds": [
+          "manus-download"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "依頼を文章で伝えて使います。"
+          },
+          "evidenceIds": [
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "agent_tasks",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "複数の調べものを並行して進めたり、ブラウザを操作したりできると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download",
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "web_search",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "大規模な並行リサーチ（Wide Research）ができると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "document_creation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "アイデアからスライドを作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "code_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "ログインやデータベースを備えた Web アプリを作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "image_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "文章から画像を生成できると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-download"
+          ],
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "id": "video_generation",
+          "status": "supported",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "アイデアから動画を作れると公式ページに記載されています。プランごとの条件は未確認です。"
+          },
+          "evidenceIds": [
+            "manus-features"
+          ],
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "pricing": {
+        "offers": [],
+        "evidenceIds": [],
+        "checkedAt": null
+      },
+      "evidence": [
+        {
+          "id": "manus-download",
+          "url": "https://manus.im/download",
+          "title": "Download Manus",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "macOS・Windows・iOS・Android 向けアプリ。スライド、Web アプリ、画像の作成などの紹介。"
+        },
+        {
+          "id": "manus-features",
+          "url": "https://manus.im/features",
+          "title": "Manus Features",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "並行リサーチ、ブラウザ操作、動画の作成などの機能紹介。日本語版のページあり。"
+        },
+        {
+          "id": "manus-terms",
+          "url": "https://manus.im/terms",
+          "title": "Terms - Manus",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "利用規約（2026年9月28日更新）。契約相手は Butterfly Effect Pte. Ltd.、準拠法はシンガポール法。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "evidenceIds": [
+          "manus-download"
+        ],
+        "checkedAt": "2026-11-15"
+      },
+      "officialPreview": {
+        "imageUrl": "https://files.manuscdn.com/webapp/media/ogBanner.png",
+        "sourceUrl": "https://manus.im/pricing",
+        "alt": null,
+        "checkedAt": "2026-11-15"
+      }
     }
   ]
 }
