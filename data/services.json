@@ -2618,12 +2618,12 @@
       "name": "Grok",
       "provider": {
         "name": "SpaceXSI（SpaceX Super Intelligence LLC）",
-        "originCountryCode": null,
+        "originCountryCode": "US",
         "evidenceIds": [
           "grok-terms",
           "grok-privacy"
         ],
-        "checkedAt": "2026-11-14"
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://grok.com/",
       "description": {
@@ -2908,10 +2908,10 @@
           "url": "https://x.ai/legal/terms-of-service",
           "title": "Terms of Service - Consumer | SpaceXSI",
           "sourceType": "other_primary",
-          "checkedAt": "2026-11-14",
+          "checkedAt": "2026-11-15",
           "publishedAt": null,
           "locale": "en",
-          "note": "Grok は SpaceXSI が開発した対話型AIと記載。13歳以上（13〜17歳は保護者の許可が必要）。紛争は米国テキサス州の裁判所で解決。"
+          "note": "SpaceX Super Intelligence LLC はネバダ州の会社で、主たる事業所は米国テキサス州オースティンと記載。Grok は同社が開発した対話型AI。13歳以上（13〜17歳は保護者の許可が必要）。"
         },
         {
           "id": "grok-privacy",
@@ -3106,10 +3106,13 @@
       "id": "meta-ai",
       "name": "Meta AI",
       "provider": {
-        "name": "Meta",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Meta（Meta Platforms, Inc.）",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "meta-ai-terms",
+          "meta-privacy"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://www.meta.ai/",
       "description": {
@@ -3198,6 +3201,26 @@
           "publishedAt": null,
           "locale": "en",
           "note": "Web の利用画面。画像の生成、写真の編集、買い物の相談の紹介。アプリのダウンロード案内あり。"
+        },
+        {
+          "id": "meta-ai-terms",
+          "url": "https://www.facebook.com/legal/ai-terms",
+          "title": "Meta AI 利用規約",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "Meta AI などのAIの利用規約。利用者と Meta Platforms, Inc. との契約と記載。"
+        },
+        {
+          "id": "meta-privacy",
+          "url": "https://www.facebook.com/privacy/policy/",
+          "title": "Metaプライバシーポリシー",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ja",
+          "note": "問い合わせ先として Meta Platforms, Inc.（米国カリフォルニア州メンロパーク）の住所を記載。"
         }
       ],
       "lifecycle": {
@@ -3489,10 +3512,13 @@
       "id": "kimi",
       "name": "Kimi",
       "provider": {
-        "name": "Moonshot AI",
+        "name": "Moonshot AI（中国本土外: NOVASCENT PRIVATE LIMITED）",
         "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "evidenceIds": [
+          "kimi-privacy-intl",
+          "kimi-privacy-cn"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://www.kimi.com/",
       "description": {
@@ -3602,6 +3628,26 @@
           "publishedAt": null,
           "locale": "en",
           "note": "日本から開いた Web の画面（英語）。スライド・文書・表・調査・エージェント・予定タスクのメニュー。表示言語は英語と簡体字中国語。© 2026 Moonshot AI。"
+        },
+        {
+          "id": "kimi-privacy-intl",
+          "url": "https://www.kimi.ai/user/agreement/userPrivacy?version=v2",
+          "title": "Kimi Privacy Policy（中国本土外の利用者向け）",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "中国本土外の利用者に対する提供者は NOVASCENT PRIVATE LIMITED と記載（2026年11月5日更新）。所在国の記載はない。"
+        },
+        {
+          "id": "kimi-privacy-cn",
+          "url": "https://www.kimi.com/user/agreement/userPrivacy?version=v2",
+          "title": "Kimi Privacy Policy（中国本土の利用者向け）",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "中国本土の利用者向け。提供者は Beijing Moonshot Technology Co., Ltd. で、連絡先は北京市海淀区（2026年11月12日発効）。"
         }
       ],
       "lifecycle": {
@@ -3628,10 +3674,12 @@
       "id": "tencent-yuanbao",
       "name": "Tencent Yuanbao",
       "provider": {
-        "name": "Tencent",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Tencent（深圳市腾讯计算机系统有限公司）",
+        "originCountryCode": "CN",
+        "evidenceIds": [
+          "yuanbao-terms"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://yuanbao.tencent.com/",
       "description": {
@@ -3702,6 +3750,16 @@
           "publishedAt": null,
           "locale": "en",
           "note": "日本から開いた Web のチャット画面。ログイン方法（WeChat・電話番号・QQ）とデスクトップ版のダウンロード案内。"
+        },
+        {
+          "id": "yuanbao-terms",
+          "url": "https://rule.tencent.com/rule/202403110001",
+          "title": "元宝用户服务协议",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "zh-CN",
+          "note": "利用規約（2026年11月5日発効）。運営者は深圳市腾讯计算机系统有限公司、連絡先の住所は深圳市南山区。"
         }
       ],
       "lifecycle": {
@@ -3914,10 +3972,12 @@
       "id": "baidu-wenxin",
       "name": "百度文心助手",
       "provider": {
-        "name": "Baidu",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Baidu（北京百度网讯科技有限公司）",
+        "originCountryCode": "CN",
+        "evidenceIds": [
+          "wenxin-terms"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://wenxin.baidu.com/",
       "description": {
@@ -4040,6 +4100,16 @@
           "publishedAt": null,
           "locale": "zh-CN",
           "note": "yiyan.baidu.com から転送される Web の画面。対話・画像生成・文章作成・PPT 生成・タスクのメニュー。"
+        },
+        {
+          "id": "wenxin-terms",
+          "url": "https://aisearch.cdn.bcebos.com/homepage/privacy/newest-term.html",
+          "title": "百度文心助手使用规则",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "zh-CN",
+          "note": "利用規約（2026年11月5日更新）。契約相手は北京百度网讯科技有限公司。連絡先の住所は北京市海淀区。"
         }
       ],
       "lifecycle": {
@@ -4492,10 +4562,12 @@
       "id": "character-ai",
       "name": "Character.AI",
       "provider": {
-        "name": "Character.AI",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Character.AI（Character Technologies, Inc.）",
+        "originCountryCode": "US",
+        "evidenceIds": [
+          "cai-tos"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://character.ai/",
       "description": {
@@ -4637,6 +4709,16 @@
           "publishedAt": "2026-10-12",
           "locale": "en",
           "note": "米国で Chapter 11 の破産手続きを開始し、プラットフォームは引き続き稼働していると発表。"
+        },
+        {
+          "id": "cai-tos",
+          "url": "https://character.ai/tos",
+          "title": "character.ai | AI Chat, Reimagined–Your Words. Your World.",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Terms of Service。通知先として Character Technologies, Inc. の住所（米国カリフォルニア州メンロパーク）を記載。"
         }
       ],
       "lifecycle": {
@@ -4880,10 +4962,12 @@
       "id": "alice-ai",
       "name": "Alice AI",
       "provider": {
-        "name": "Yandex",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Yandex（ООО «Платформа ИИ-решений»）",
+        "originCountryCode": "RU",
+        "evidenceIds": [
+          "alice-terms"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://alice.yandex.ru/",
       "description": {
@@ -5034,6 +5118,16 @@
           "publishedAt": null,
           "locale": "ru",
           "note": "Web の画面（ロシア語）。無料のAIチャットと紹介。文章生成、画像生成、ファイルのアップロード（Pro モード）、予約や価格比較の機能。"
+        },
+        {
+          "id": "alice-terms",
+          "url": "https://yandex.ru/legal/alice_chat/ru",
+          "title": "Условия использования Сервиса «Алиса AI»",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ru",
+          "note": "「Алиса AI」の利用規約（2026年9月10日公開）。提供者は ООО «Платформа ИИ-решений»（ИНН 9705252275）。ООО はロシア法の有限会社、ИНН はロシアの納税者番号。住所の記載はない。"
         }
       ],
       "lifecycle": {
@@ -5267,12 +5361,13 @@
       "id": "poe",
       "name": "Poe",
       "provider": {
-        "name": "Quora",
-        "originCountryCode": null,
+        "name": "Quora（Quora, Inc.）",
+        "originCountryCode": "US",
         "evidenceIds": [
-          "poe-terms"
+          "poe-terms",
+          "quora-privacy"
         ],
-        "checkedAt": "2026-11-14"
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://poe.com/",
       "description": {
@@ -5372,6 +5467,16 @@
           "publishedAt": null,
           "locale": "en",
           "note": "Poe は他社のAIモデルによるボットを使えるプラットフォームで、契約相手は Quora, Inc.。13歳未満は利用不可。"
+        },
+        {
+          "id": "quora-privacy",
+          "url": "https://www.quora.com/about/privacy",
+          "title": "Privacy Policy - Quora",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "Quora, Inc. の郵送先として米国カリフォルニア州マウンテンビューの住所を記載。"
         }
       ],
       "lifecycle": {
@@ -5396,14 +5501,16 @@
       "id": "gigachat",
       "name": "GigaChat",
       "provider": {
-        "name": "Sber",
-        "originCountryCode": null,
-        "evidenceIds": [],
-        "checkedAt": null
+        "name": "Sber（ПАО Сбербанк）",
+        "originCountryCode": "RU",
+        "evidenceIds": [
+          "giga-agreement"
+        ],
+        "checkedAt": "2026-11-15"
       },
       "officialUrl": "https://giga.chat/",
       "description": {
-        "ja": "ロシアの Sber（ズベルバンク）が提供する、ロシア語を中心とした対話型AIサービス。会話のほか、音声での会話や調べものの機能があります。"
+        "ja": "ロシアの Sber（ズベルバンク）が提供する、ロシア語を中心とした対話型AIサービス。会話のほか、音声での会話や調べものの機能があります。利用規約では、利用者をロシア連邦の居住者に限っています。"
       },
       "platforms": {
         "values": [
@@ -5433,10 +5540,14 @@
       "availability": [
         {
           "regionCode": "JP",
-          "status": "unknown",
-          "conditions": null,
-          "evidenceIds": [],
-          "checkedAt": null
+          "status": "unsupported",
+          "conditions": {
+            "ja": "利用規約で、利用者は18歳以上でロシア連邦の居住者に限ると定められています。"
+          },
+          "evidenceIds": [
+            "giga-agreement"
+          ],
+          "checkedAt": "2026-11-15"
         }
       ],
       "capabilities": [
@@ -5490,6 +5601,16 @@
           "publishedAt": null,
           "locale": "ru",
           "note": "日本から開いた Web の画面（ロシア語）。新しいチャット、プロジェクト、動画、調べもの、音声での会話のメニュー。"
+        },
+        {
+          "id": "giga-agreement",
+          "url": "https://developers.sber.ru/docs/ru/policies/gigachat/agreement",
+          "title": "Правила допустимого использования GigaChat",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-15",
+          "publishedAt": null,
+          "locale": "ru",
+          "note": "GigaChat の利用規約。利用者は18歳以上でロシア連邦の居住者と定義。ПАО Сбербанк の法的住所はモスクワ（ヴァヴィロフ通り19）。"
         }
       ],
       "lifecycle": {
