@@ -6885,6 +6885,165 @@
         "alt": null,
         "checkedAt": "2026-11-15"
       }
+    },
+    {
+      "id": "studyarena",
+      "name": "StudyArena",
+      "aliases": [],
+      "provider": {
+        "name": "A1Base Inc.",
+        "originCountryCode": null,
+        "evidenceIds": [
+          "studyarena-terms"
+        ],
+        "checkedAt": "2026-11-19"
+      },
+      "officialUrl": "https://studyarena.com",
+      "description": {
+        "ja": "学習の質問に対する3つのAIの回答を、モデル名を見ずに比較するサービス。回答に投票した後でモデル名を確認できます。無料アカウントが必要です。"
+      },
+      "inclusionReason": {
+        "ja": "同じ学習の質問に対する複数モデルの説明を、モデル名を伏せた状態で比べられるため。"
+      },
+      "categories": [
+        "multi_model"
+      ],
+      "platforms": {
+        "values": [
+          "web"
+        ],
+        "evidenceIds": [
+          "studyarena-home"
+        ],
+        "checkedAt": "2026-11-19"
+      },
+      "languages": {
+        "interface": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        },
+        "conversation": {
+          "values": [],
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      },
+      "availability": [
+        {
+          "regionCode": "JP",
+          "status": "unknown",
+          "conditions": null,
+          "evidenceIds": [],
+          "checkedAt": null
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "text_chat",
+          "status": "conditional",
+          "delivery": "in_product",
+          "scope": {
+            "regions": [],
+            "plans": [],
+            "platforms": [
+              "web"
+            ],
+            "languages": []
+          },
+          "conditions": {
+            "ja": "無料アカウントが必要です。3モデルの回答比較、投票、モデル名の表示、履歴の保存は無料プランに含まれます。モデルの選択と6モデルの比較にはSupporterが必要です。利用は13歳以上（地域の最低年齢が高い場合はその年齢以上）で、未成年者には保護者の許可が必要です。機能や提供条件は国やプラットフォームによって異なる場合があります。"
+          },
+          "evidenceIds": [
+            "studyarena-home",
+            "studyarena-pricing",
+            "studyarena-terms"
+          ],
+          "checkedAt": "2026-11-19"
+        }
+      ],
+      "pricing": {
+        "offers": [
+          {
+            "planName": "Free",
+            "access": "free",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "3モデルの回答比較、投票、モデル名の表示、履歴の保存。無料アカウントが必要です。日本向けの提供条件・料金は未確認です。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "studyarena-pricing"
+            ],
+            "checkedAt": "2026-11-19"
+          },
+          {
+            "planName": "Supporter",
+            "access": "paid",
+            "amount": null,
+            "currency": null,
+            "billingPeriod": null,
+            "regionCode": null,
+            "taxTreatment": "unknown",
+            "limits": {
+              "ja": "モデル選択と6モデルの比較。日本向けの価格・提供条件は未確認のため金額は記録していません。"
+            },
+            "isPromotional": false,
+            "evidenceIds": [
+              "studyarena-pricing"
+            ],
+            "checkedAt": "2026-11-19"
+          }
+        ],
+        "checkedAt": "2026-11-19",
+        "evidenceIds": [
+          "studyarena-pricing"
+        ]
+      },
+      "strengthClaims": [],
+      "evidence": [
+        {
+          "id": "studyarena-home",
+          "url": "https://studyarena.com",
+          "title": "StudyArena",
+          "sourceType": "official_product_page",
+          "checkedAt": "2026-11-19",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "同じ質問への3つのAI回答、投票後のモデル名表示、最初の質問前の無料アカウント作成案内を確認。"
+        },
+        {
+          "id": "studyarena-pricing",
+          "url": "https://studyarena.com/pricing",
+          "title": "Pricing · StudyArena",
+          "sourceType": "official_pricing",
+          "checkedAt": "2026-11-19",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "無料プランの3モデル比較・投票・モデル名表示・履歴と、Supporterのモデル選択・6モデル比較を確認。日本向け条件は未確認。"
+        },
+        {
+          "id": "studyarena-terms",
+          "url": "https://studyarena.com/legal/terms-of-service",
+          "title": "Terms of Service · StudyArena",
+          "sourceType": "other_primary",
+          "checkedAt": "2026-11-19",
+          "publishedAt": null,
+          "locale": "en",
+          "note": "運営会社はA1Base Inc.。年齢と保護者の許可、国やプラットフォームによる提供条件の違いを記載。"
+        }
+      ],
+      "lifecycle": {
+        "status": "active",
+        "checkedAt": "2026-11-19",
+        "evidenceIds": [
+          "studyarena-home"
+        ]
+      }
     }
   ]
 }
